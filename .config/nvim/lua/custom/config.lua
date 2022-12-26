@@ -27,4 +27,4 @@ vim.opt.backup = false
 vim.opt.signcolumn = "yes:1"
 vim.opt.updatetime = 300
 vim.opt.timeoutlen = 500
-vim.opt.whichwrap:append("<,>,h,l"
+vim.opt.whichwrap:append("<,>,h,l")
