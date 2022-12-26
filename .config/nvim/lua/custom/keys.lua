@@ -2,6 +2,7 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("X", "<leader>;", ":", { silent = false })
+vim.keymap.set("n", "<c-_>", "<Plug>kommentary_line_default", {})
 vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
 vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv')
 vim.keymap.set("n", "<esc>", "<cmd>nohl<cr><esc>", { silent = true })
@@ -38,6 +39,7 @@ vim.keymap.set("n", "gl", "$")
 vim.keymap.set("n", "qq", "<cmd>q<cr>")
 vim.keymap.set("n", "zm", "zn")
 vim.keymap.set("n", "zn", "zm")
+vim.keymap.set("x", "<c-_>", "<Plug>kommentary_visual_default", {})
 vim.keymap.set("x", "<leader>;", ":", { silent = false })
 vim.keymap.set("x", "gh", "0")
 vim.keymap.set("x", "gl", "$")

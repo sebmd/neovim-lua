@@ -11,3 +11,4 @@
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+- [kommentary](https://github.com/b3nj5m1n/kommentary)

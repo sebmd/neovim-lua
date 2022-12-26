@@ -30,6 +30,8 @@ return require("packer").startup(function(use)
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
   })
 
+  use("b3nj5m1n/kommentary") -- komentarze
+
   use({
     "nvim-telescope/telescope.nvim",
     -- 'nvim-telescope/telescope.nvim', tag = '0.1.0',

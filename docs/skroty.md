@@ -41,3 +41,4 @@
 | `zn`         | Otwiera zagnieżdżony tekst`zm`                                       |
 | `s`          | Przechodzi do linii niżej, zawierającej wskazany znak (Leap)         |
 | `S`          | Przechodzi do linii wyżej, zawierającej wskazany znak (Leap)         |
+| `<ctrl-/>`   | Wstawia znak komentarza na początku linii (kommentary)               |
