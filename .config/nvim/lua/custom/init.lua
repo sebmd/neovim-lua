@@ -6,3 +6,4 @@ require("custom.lualine") -- ~/.config/nvim/lua/custom/lualine.lua
 require("custom.leap") -- ~/.config/nvim/lua/custom/leap.lua
 require("custom.gitsigns") -- ~/.config/nvim/lua/custom/gitsigns.lua
 require("custom.nvim-tree") -- ~/.config/nvim/lua/custom/nvim-tree.lua
+require("custom.funkcje") -- ~/.config/nvim/lua/custom/funkcje.lua
