@@ -39,6 +39,9 @@ return require("packer").startup(function(use)
     requires = { { "nvim-lua/plenary.nvim" } },
   })
 
+  use({ "folke/zen-mode.nvim", disable = false })
+  use("folke/twilight.nvim")
+
   use("ggandor/leap.nvim")
 
   use("mbbill/undotree")
