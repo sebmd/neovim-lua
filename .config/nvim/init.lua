@@ -49,6 +49,8 @@ return require("packer").startup(function(use)
 
   use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
 
+  use("steelsojka/pears.nvim")
+
   if packer_bootstrap then
     require("packer").sync()
   end
