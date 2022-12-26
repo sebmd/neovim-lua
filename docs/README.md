@@ -1,0 +1,3 @@
+# README
+
+- [Skróty](skroty.md)
