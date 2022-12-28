@@ -71,6 +71,6 @@ Nvim_Config = function()
     prompt_title = "< NVIM >",
     cwd = "$HOME/.config/nvim/",
     find_command = { "rg", "--files", "--follow" },
-    file_ignore_patterns = { "spell/", ".md" },
+    file_ignore_patterns = { "spell/", "plugin/packer_compiled.lua", ".md" },
   })
 end
