@@ -42,3 +42,10 @@
 | `s`          | Przechodzi do linii niżej, zawierającej wskazany znak (Leap)         |
 | `S`          | Przechodzi do linii wyżej, zawierającej wskazany znak (Leap)         |
 | `<ctrl-/>`   | Wstawia znak komentarza na początku linii (kommentary)               |
+| `j`          | Zamienia na `gj` - poruszanie się po zawijanych liniach              |
+| `k`          | Zamienia na `gk` - poruszanie się po zawijanych liniach              |
+| `kj`         | W trybie **INSERT** zastępuje klawisz **ESC**                        |
+| `<ctrl-h>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w lewo        |
+| `<ctrl-j>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w dół        |
+| `<ctrl-k>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w górę       |
+| `<ctrl-h>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w prawo       |

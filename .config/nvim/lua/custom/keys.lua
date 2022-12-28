@@ -132,9 +132,9 @@ vim.keymap.set("n", "<leader>m", ":Telescope keymaps<cr>")
 -- Usuwa zaznaczony tekst a następnie wkleja tekst ze schowka bez podmiany rejestru
 vim.keymap.set("x", "<leader>p", '"_dP')
 -- Wkleja ostatnio skopiowany tekst, NIE usunięty, ustawiony jako ,p i ,P
-vim.keymap.set("n", ",p", '"0p')
-vim.keymap.set("n", ",P", '"0P')
+-- vim.keymap.set("n", ",p", '"0p')
+-- vim.keymap.set("n", ",P", '"0P')
 -- Usuwa obiekt tekstowy nie kopiując go do standardowego rejestru
-vim.keymap.set("n", "<leader>d", '"-d')
+-- vim.keymap.set("n", "<leader>d", '"-d')
 -- Edcja konfiguracji
 vim.keymap.set("n", "<leader>v", "<cmd>lua Nvim_Config()<cr>")
