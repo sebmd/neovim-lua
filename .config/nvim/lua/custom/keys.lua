@@ -1,7 +1,7 @@
 -- mapowanie klawiszy keys.lua
 vim.g.mapleader = " "
 
-vim.keymap.set("X", "<leader>;", ":", { silent = false })
+vim.keymap.set("x", "<leader>;", ":", { silent = false })
 vim.keymap.set("n", "<c-_>", "<Plug>kommentary_line_default", {})
 vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
 vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv')
@@ -116,7 +116,7 @@ vim.keymap.set("x", "-", "<C-x>", { silent = true })
 -- Wyrównanie paragrafu '=ip' dodatkowo zawija tekst na długośc 'textwidth' znaków 'gqap'
 vim.keymap.set("n", "<leader>a", "=ip gqap")
 -- zaznacza wyraz pod kursorem i przechodzi do modyfikacji wszystkich znalezionych wyrazów
-vim.keymap.set("<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 -- Poruszanie się w trybie COMMAND
 vim.keymap.set("c", "<c-j>", "<down>")
 vim.keymap.set("c", "<c-k>", "<up>")
