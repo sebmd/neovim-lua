@@ -64,3 +64,13 @@ MkDir = function()
     vim.fn.mkdir(dir, "p")
   end
 end
+
+-- Wyszukiwanie plików konfiguracyjnych Neovim w katalogu $HOME/.config/nvim
+Nvim_Config = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "< NVIM >",
+    cwd = "$HOME/.config/nvim/",
+    find_command = { "rg", "--files", "--follow" },
+    file_ignore_patterns = { "spell/", ".md" },
+  })
+end
