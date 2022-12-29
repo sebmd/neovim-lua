@@ -22,8 +22,19 @@ return require("packer").startup(function(use)
       vim.cmd("colorscheme rose-pine")
     end,
   })
+  use("RRethy/nvim-base16")
+  use("rebelot/kanagawa.nvim")
+  use("ayu-theme/ayu-vim")
+  use("gruvbox-community/gruvbox")
+  use("kristijanhusak/vim-hybrid-material")
+  use("lighthaus-theme/vim-lighthaus")
+  use("sainnhe/everforest")
+  use("sainnhe/gruvbox-material")
+  use("srcery-colors/srcery-vim")
+  use("zekzekus/menguless")
 
   use("kyazdani42/nvim-web-devicons")
+  use("lukas-reineke/indent-blankline.nvim")
 
   use({
     "nvim-lualine/lualine.nvim",
@@ -31,6 +42,8 @@ return require("packer").startup(function(use)
   })
 
   use("b3nj5m1n/kommentary") -- komentarze
+
+  use({ "jamessan/vim-gnupg", disable = false }) -- szyfrowanie
 
   use({
     "nvim-telescope/telescope.nvim",
