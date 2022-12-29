@@ -117,6 +117,8 @@ vim.keymap.set("x", "-", "<C-x>", { silent = true })
 vim.keymap.set("n", "<leader>a", "=ip gqap")
 -- zaznacza wyraz pod kursorem i przechodzi do modyfikacji wszystkich znalezionych wyrazów
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+-- w trybie VISUAL ('v') należy zacząć zaznaczanie od słowa, które chcemy zamienić
+vim.keymap.set("x", "<leader>s", ":s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 -- Poruszanie się w trybie COMMAND
 vim.keymap.set("c", "<c-j>", "<down>")
 vim.keymap.set("c", "<c-k>", "<up>")
