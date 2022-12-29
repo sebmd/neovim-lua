@@ -17,18 +17,22 @@
 | `<leader>f`  | Wyszukiwarka plików `Telescope find_files`                           |
 | `<leader>g`  | Przeszukiwanie plików `Telescope live_grep`                          |
 | `<leader>l`  | Wyświetla informacje o pliku                                         |
+| `<leader>m`  | Wyświetla listę zmapowanych klawiszy `Telescope keymaps`             |
 | `<leader>n`  | Menadżer plików `NvimTree`                                           |
 | `<leader>o`  | Zamyka wszystkie okna poza bieżącym                                  |
+| `<leader>p`  | Lista projektów `Telescope project`                                  |
 | `<leader>q`  | Kończy pracę `:q`                                                    |
 | `<leader>r`  | Wyświetla zawartość rejestrów `Telescope registers`                  |
 | `<leader>so` | Wczytuje źródło otwartego pliku konfiguracyjnego `%.lua`             |
 | `<leader>sp` | Dzieli ekran poziomo                                                 |
 | `<leader>u`  | Uruchamia rejestr zmian `UndotreeToggle`                             |
+| `<leader>v`  | Edycja plików konfiguracyjnych Neovim                                |
 | `<leader>vs` | Dzieli ekran pionowo                                                 |
 | `<leader>w`  | Zapisuje zmiany w pliku jeśli takie miały miejsce                    |
 | `<leader>x`  | Zapisuje zmiany i kończy pracę                                       |
 | `<leader>z`  | Wychodzi bez zapisania                                               |
 | `<tab>`      | Przechodzi pomiędzy dwoma ostatnio używanymi buforami                |
+| `:q`         | Historia komend `Telescope command_history`                          |
 | `dh`         | Usuwa od kursora do początku linii `xd0`                             |
 | `dl`         | Usuwa od kursora do końca linii `d$`                                 |
 | `gf`         | Otwiera / tworzy plik pod kursorem                                   |
