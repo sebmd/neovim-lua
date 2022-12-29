@@ -41,6 +41,9 @@ return require("packer").startup(function(use)
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
   })
 
+  use({ "Jorengarenar/fauxClip", disable = true }) -- obsługa schowka systemowego
+  use({ "ojroques/vim-oscyank", disable = true }) -- obsługa schowka przez ssh
+
   use("b3nj5m1n/kommentary") -- komentarze
 
   use({ "jamessan/vim-gnupg", disable = false }) -- szyfrowanie
@@ -54,6 +57,14 @@ return require("packer").startup(function(use)
 
   use({ "folke/zen-mode.nvim", disable = false })
   use("folke/twilight.nvim")
+  use({ "dhruvasagar/vim-table-mode", disable = false })
+  use({ "vimwiki/vimwiki", disable = true })
+  use({ "junegunn/vim-markdown-toc", disable = true })
+  use({ "instant-markdown/vim-instant-markdown", disable = true })
+  use({ "oberblastmeister/neuron.nvim", disable = true })
+  use({ "dhruvasagar/vim-dotoo", disable = true })
+  use({ "folke/todo-comments.nvim", disable = true })
+  use({ "folke/trouble.nvim", disable = true })
 
   use("ggandor/leap.nvim")
 
