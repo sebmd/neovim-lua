@@ -1,3 +1,9 @@
+vim.api.nvim_create_augroup("AutoUpdatePlugins", { clear = true })
+vim.api.nvim_create_autocmd(
+  "BufWritePost",
+  { pattern = "pluginy.lua", command = "source <afile> | PackerSync", group = "AutoUpdatePlugins" }
+)
+
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -14,7 +20,6 @@ local packer_bootstrap = ensure_packer()
 -- pluginy
 return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
-
   use({
     "rose-pine/neovim",
     as = "rose-pine",
@@ -32,29 +37,23 @@ return require("packer").startup(function(use)
   use("sainnhe/gruvbox-material")
   use("srcery-colors/srcery-vim")
   use("zekzekus/menguless")
-
+  use("vim-scripts/AutoComplPop")
   use("kyazdani42/nvim-web-devicons")
   use("lukas-reineke/indent-blankline.nvim")
-
   use({
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
   })
-
   use({ "Jorengarenar/fauxClip", disable = true }) -- obsługa schowka systemowego
   use({ "ojroques/vim-oscyank", disable = true }) -- obsługa schowka przez ssh
-
   use("b3nj5m1n/kommentary") -- komentarze
-
   use({ "jamessan/vim-gnupg", disable = false }) -- szyfrowanie
-
   use({
     "nvim-telescope/telescope.nvim",
     -- 'nvim-telescope/telescope.nvim', tag = '0.1.0',
     -- or                            , branch = '0.1.x',
     requires = { { "nvim-lua/plenary.nvim" } },
   })
-
   use({ "folke/zen-mode.nvim", disable = false })
   use("folke/twilight.nvim")
   use({ "dhruvasagar/vim-table-mode", disable = false })
@@ -65,17 +64,11 @@ return require("packer").startup(function(use)
   use({ "dhruvasagar/vim-dotoo", disable = true })
   use({ "folke/todo-comments.nvim", disable = true })
   use({ "folke/trouble.nvim", disable = true })
-
   use("ggandor/leap.nvim")
-
   use("mbbill/undotree")
-
   use("nvim-tree/nvim-tree.lua")
-
   use("lewis6991/gitsigns.nvim")
-
   use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
-
   use("steelsojka/pears.nvim")
 
   if packer_bootstrap then
