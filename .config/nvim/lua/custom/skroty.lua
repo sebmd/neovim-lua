@@ -140,3 +140,7 @@ vim.keymap.set("n", "<leader>m", ":Telescope keymaps<cr>")
 -- vim.keymap.set("n", "<leader>d", '"-d')
 -- Edcja konfiguracji
 vim.keymap.set("n", "<leader>v", "<cmd>lua NvimConfig()<cr>")
+vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()<CR>")
+-- Skróty dla plików help
+vim.cmd([[au Filetype help nnoremap <leader>l <c-]>]]
+vim.cmd([[au Filetype help nnoremap <leader>h <c-t>]]

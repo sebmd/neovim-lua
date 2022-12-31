@@ -20,13 +20,7 @@ local packer_bootstrap = ensure_packer()
 -- pluginy
 return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
-  use({
-    "rose-pine/neovim",
-    as = "rose-pine",
-    config = function()
-      vim.cmd("colorscheme rose-pine")
-    end,
-  })
+  use("rose-pine/neovim")
   use("RRethy/nvim-base16")
   use("rebelot/kanagawa.nvim")
   use("ayu-theme/ayu-vim")
@@ -37,7 +31,7 @@ return require("packer").startup(function(use)
   use("sainnhe/gruvbox-material")
   use("srcery-colors/srcery-vim")
   use("zekzekus/menguless")
-  use({ "yamatsum/nvim-cursorline", disable = false })
+  use({ "yamatsum/nvim-cursorline", disable = true })
   use("vim-scripts/AutoComplPop")
   use("kyazdani42/nvim-web-devicons")
   use("lukas-reineke/indent-blankline.nvim")

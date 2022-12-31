@@ -40,6 +40,7 @@
 | `gj`         | Przechodzi do następnej zmiany (Gitsigns)                            |
 | `gk`         | Przechodzi do poprzedniej zmiany (Gitsigns)                          |
 | `gl`         | Przechodzi na koniec linii `$`                                       |
+| `gs`         | Podpowiedzi sprawdzania pisowni                                      |
 | `qq`         | Kończy pracę `:q`                                                    |
 | `zm`         | Zamyka zagnieżdżony tekst `zn`                                       |
 | `zn`         | Otwiera zagnieżdżony tekst`zm`                                       |
