@@ -25,10 +25,17 @@ vim.wo.spell = false
 vim.opt.backspace = { "indent", "eol", "start" }
 vim.opt.clipboard = "unnamedplus" -- dostęp do schowka systemowego
 vim.opt.completeopt = { "menuone", "noselect" }
+vim.opt.wildmenu = true
+vim.opt.wildmode = "longest:full,full"
+-- vim.opt.wildmode = "list:longest,full"
 vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.undofile = true -- enable persistent undo
+vim.opt.undolevels = 1000
+vim.bo.swapfile = false -- tworzenie pliku swap
 vim.opt.signcolumn = "yes:1"
 vim.opt.updatetime = 300
-vim.opt.timeoutlen = 500
+vim.opt.timeoutlen = 500 -- czas w milisekundach na wprowadzenie skrótu klawiszowego, ma znaczenie przy sekwencjach np. <leader>sW
 vim.opt.whichwrap:append("<,>,h,l")
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
@@ -50,3 +57,15 @@ vim.opt.shiftround = true
 vim.opt.showmode = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.bo.spelllang = "pl"
+vim.opt.termguicolors = true
+vim.opt.lazyredraw = true -- szybciej wykonuje makra
+vim.wo.wrap = false -- zawijanie linii
+vim.opt.path:remove("/usr/include")
+vim.opt.path:append("**")
+vim.opt.tags:append("./tags,./../tags,./../../tags,./../../../tags,tags")
+vim.opt.wildignore = "*/.git/*,*/.hg/*,*/.svn/*.,*/.DS_Store,*/node_modules/*"
+vim.opt.listchars = "nbsp:⦸,tab:▸ ,eol:¬,extends:»,precedes:«,trail:•" -- eol ↲
+vim.opt.showbreak = "↪"
+vim.opt.fillchars:append({ eob = " " }) -- usuwa znak ~ na końcu bufora
+vim.opt.complete:append("kspell") -- Ctrl+p w trybie INSERT podpowiedzi ze słownika wymaga włączenia trybu spell
