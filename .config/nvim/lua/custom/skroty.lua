@@ -170,6 +170,18 @@ vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()
 -- vim.keymap.set("n", "<leader>ee", "<cmd>lua FindNotesDir()<cr>")
 -- Przeszukiwanie plików w katalogu $NOTES_DIR
 -- vim.keymap.set("n", "<leader>er", "<cmd>lua GrepNotesDir()<cr>")
--- Skróty dla plików help
-vim.cmd([[au Filetype help nnoremap <leader>l <c-]>]])
-vim.cmd([[au Filetype help nnoremap <leader>h <c-t>]])
+-- Ustawienia skrótów klawiszowych dla plików pomocy
+vim.api.nvim_create_augroup("HelpMap", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {
+    "help",
+  },
+  callback = function()
+    vim.api.nvim_command([[ nnoremap <c-n> :cnext<cr> ]])
+    vim.api.nvim_command([[ nnoremap <c-p> :cprevious<cr> ]])
+    vim.api.nvim_command([[ nnoremap <leader>l <c-]> ]])
+    vim.api.nvim_command([[ nnoremap <leader>h <c-t> ]])
+    vim.api.nvim_command([[ nnoremap q :quit<cr> ]])
+  end,
+  group = "HelpMap",
+})
