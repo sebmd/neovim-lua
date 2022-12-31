@@ -25,8 +25,8 @@ vim.keymap.set("n", "<leader>so", '<cmd>luafile %<cr><cmd>echo "Plik przeładowa
 vim.keymap.set("n", "<leader>sp", "<cmd>sp<cr>")
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>")
 vim.keymap.set("n", "<leader>vs", "<cmd>vs<cr>")
-vim.keymap.set("n", "<leader>w", "<cmd>call Write()<cr>")
-vim.keymap.set("n", "<leader>x", "<cmd>call Write()<cr><cmd>q<cr>")
+vim.keymap.set("n", "<leader>w", "<cmd>lua Write()<cr>")
+vim.keymap.set("n", "<leader>x", "<cmd>lua Write()<cr><cmd>q<cr>")
 vim.keymap.set("n", "<leader>z", "<cmd>q!<cr>")
 vim.keymap.set("n", "<tab>", "<cmd>e #<cr>")
 vim.keymap.set("n", "dh", "xd0")
@@ -139,4 +139,4 @@ vim.keymap.set("n", "<leader>m", ":Telescope keymaps<cr>")
 -- Usuwa obiekt tekstowy nie kopiując go do standardowego rejestru
 -- vim.keymap.set("n", "<leader>d", '"-d')
 -- Edcja konfiguracji
-vim.keymap.set("n", "<leader>v", "<cmd>lua Nvim_Config()<cr>")
+vim.keymap.set("n", "<leader>v", "<cmd>lua NvimConfig()<cr>")

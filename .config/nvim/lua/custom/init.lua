@@ -10,3 +10,4 @@ require("custom.nvim-tree") -- ~/.config/nvim/lua/custom/nvim-tree.lua
 require("custom.kommentary") -- ~/.config/nvim/lua/custom/kommentary.lua
 require("custom.pears") -- ~/.config/nvim/lua/custom/pears.lua
 require("custom.zenmode") -- ~/.config/nvim/lua/custom/zenmode.lua
+require("custom.komendy") -- ~/.config/nvim/lua/custom/komendy.lua

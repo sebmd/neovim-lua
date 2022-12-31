@@ -1,25 +1,20 @@
 -- Zapisuje plik Write()
-vim.api.nvim_exec(
-  [[
-    function! Write()
-        if filereadable(expand("%"))
-            for buf in getbufinfo("%")
-                if buf.changed
-                    execute ':silent update'
-                    echo "Zapisałem" expand("%:p")
-                else
-                    echo "Brak zmian w" expand("%:p")
-                endif
-            endfor
-        else
-            execute ':lua MkDir()'
-            execute ':silent write'
-            echo "Utworzyłem" expand("%:p")
-        endif
-    endfunction
-]],
-  false
-)
+Write = function()
+  if vim.fn.filereadable(vim.fn.expand("%")) == 1 then
+    for _, v in ipairs(vim.fn.getbufinfo("%")) do
+      if v.changed == 1 then
+        vim.cmd("silent update")
+        print("Zapisałem" .. " " .. vim.fn.expand("%:p"))
+      else
+        print("Brak zmian w pliku" .. " " .. vim.fn.expand("%:p"))
+      end
+    end
+  else
+    MkDir()
+    vim.cmd("silent write")
+    print("Utworzyłem" .. " " .. vim.fn.expand("%:p"))
+  end
+end
 
 -- Wyświetla informacje o pliku
 vim.api.nvim_exec(
@@ -34,8 +29,19 @@ vim.api.nvim_exec(
   false
 )
 
+-- Przechodzi do katalogu edytowanego pliku i uruchamia skrypt ~/bin/gp.sh
+vim.api.nvim_exec(
+  [[
+    function! GP()
+        silent execute ':!$HOME/bin/gp.sh %:p'
+        redraw!
+    endfunction
+]],
+  false
+)
+
 -- wstawia: # 2022-12-11 03:31:01
-Date_header = function()
+DateHeader = function()
   local pos = vim.api.nvim_win_get_cursor(0)[2]
   local line = vim.api.nvim_get_current_line()
   local nline = line:sub(0, pos) .. "# " .. os.date("%Y-%m-%d %H:%M:%S") .. line:sub(pos + 1)
@@ -66,7 +72,7 @@ MkDir = function()
 end
 
 -- Wyszukiwanie plików konfiguracyjnych Neovim w katalogu $HOME/.config/nvim
-Nvim_Config = function()
+NvimConfig = function()
   require("telescope.builtin").find_files({
     prompt_title = "< NVIM >",
     cwd = "$HOME/.config/nvim/",
