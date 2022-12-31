@@ -132,6 +132,8 @@ vim.keymap.set("t", "<c-h>", "<c-\\><c-n><c-w>h")
 vim.keymap.set("t", "<c-j>", "<c-\\><c-n><c-w>j")
 vim.keymap.set("t", "<c-k>", "<c-\\><c-n><c-w>k")
 vim.keymap.set("t", "<c-l>", "<c-\\><c-n><c-w>l")
+-- Wklejanie w linii komend
+vim.keymap.set("c", "<c-r>p", '<c-r>"')
 -- Lista zmapowanych klawiszy
 vim.keymap.set("n", "<leader>m", ":Telescope keymaps<cr>")
 -- Usuwa zaznaczony tekst a następnie wkleja tekst ze schowka bez podmiany rejestru
