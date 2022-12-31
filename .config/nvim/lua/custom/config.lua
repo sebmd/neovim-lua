@@ -1,11 +1,12 @@
 -- config.lua ustawienia
-vim.opt.nu = true
-vim.opt.rnu = true
+vim.wo.number = true -- wyświetlanie numerów linii
+vim.wo.relativenumber = true -- wyświetlanie relatywnych numerów linii
+vim.opt.numberwidth = 5 -- ustawia szerokość kolumny numerowania linii
 vim.opt.laststatus = 3
 vim.opt.showtabline = 1 -- górna belka: 0 nie pokazuje; 1 pokazuje jeśli są karty (tab), 2 zasze pokazuje
 vim.opt.background = "dark"
-vim.wo.conceallevel = 0
-vim.bo.textwidth = 100
+vim.wo.conceallevel = 0 -- sprawia, że znaki `` są widzialne w plikach Markdown
+vim.bo.textwidth = 100 -- szerokość linii
 vim.wo.colorcolumn = "+1"
 vim.wo.cursorline = true
 vim.bo.fileencoding = "utf-8"
@@ -13,6 +14,7 @@ vim.bo.fileformat = "unix"
 vim.opt.encoding = "utf-8"
 vim.wo.foldcolumn = "1"
 vim.wo.foldmethod = "marker"
+vim.opt.iskeyword:append("-,_") -- nie traktuje `-` jako seperatora słowa np: wyraz-jeden uznawane jest za całe słowo
 vim.opt.title = true
 vim.opt.titlestring = "%<%F%=%l/%L - NVim"
 vim.opt.pumheight = 10
@@ -21,10 +23,30 @@ vim.opt.autochdir = true
 vim.opt.cmdheight = 2
 vim.wo.spell = false
 vim.opt.backspace = { "indent", "eol", "start" }
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus" -- dostęp do schowka systemowego
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.backup = false
 vim.opt.signcolumn = "yes:1"
 vim.opt.updatetime = 300
 vim.opt.timeoutlen = 500
 vim.opt.whichwrap:append("<,>,h,l")
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.bo.smartindent = true
+vim.opt.inccommand = "split"
+vim.opt.joinspaces = false
+vim.bo.formatoptions = "l"
+vim.wo.linebreak = true
+vim.opt.list = true
+vim.opt.scrolloff = 5
+vim.opt.sidescrolloff = 8
+vim.bo.tabstop = 4
+vim.bo.softtabstop = 4
+vim.bo.shiftwidth = 4
+vim.bo.expandtab = true
+vim.opt.shiftround = true
+vim.opt.showmode = false
+vim.opt.splitbelow = true
+vim.opt.splitright = true
