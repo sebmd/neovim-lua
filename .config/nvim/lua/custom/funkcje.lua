@@ -40,6 +40,20 @@ vim.api.nvim_exec(
   false
 )
 
+-- Odwraca kolor tła
+vim.api.nvim_exec(
+  [[
+    function! RevBackground()
+        if &background=="light"
+            set background=dark
+        else
+            set background=light
+        endif
+    endfunction
+]],
+  false
+)
+
 -- wstawia: # 2022-12-11 03:31:01
 DateHeader = function()
   local pos = vim.api.nvim_win_get_cursor(0)[2]
@@ -79,4 +93,53 @@ NvimConfig = function()
     find_command = { "rg", "--files", "--follow" },
     file_ignore_patterns = { "spell/", "plugin/packer_compiled.lua", ".md" },
   })
+end
+
+FindFiles = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "< Wyszukiwanie >",
+    find_command = { "rg", "--files", "--hidden", "--follow", "-g", "!.git" },
+  })
+end
+
+-- Wyszukiwanie telescope w katalogu $NOTES_DIR
+NotesDir = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "< Notatki >",
+    cwd = "$NOTES_DIR",
+  })
+end
+
+-- Przeszukiwanie telescope w katalogu $NOTES_DIR
+GrepNotesDir = function()
+  require("telescope.builtin").live_grep({
+    prompt_title = "< Notatki >",
+    cwd = "$NOTES_DIR",
+  })
+end
+
+-- Przenosi linię do podanego pliku w argumencie
+SendLineToFile = function(plik)
+  vim.cmd("d")
+  -- vim.cmd("cd $NOTES_DIR")
+  rejestr = vim.fn.getreg("@", 1, 1)
+  vim.fn.writefile(rejestr, plik, "a")
+  vim.cmd("cd %:p:h")
+end
+
+-- Kopiuje linię do podanego pliku w argumencie
+CopyLineToFile = function(plik)
+  vim.cmd("y")
+  -- vim.cmd("cd $NOTES_DIR")
+  vim.fn.writefile(vim.fn.getreg("@", 1, 1), plik, "a")
+  vim.cmd("cd %:p:h")
+end
+
+-- Kopiuje linię do podanego pliku w argumencie
+CopyVLineToFile = function(plik)
+  -- vim.cmd("'<,'>y")
+  vim.cmd("y")
+  -- vim.cmd("cd $NOTES_DIR")
+  vim.fn.writefile(vim.fn.getreg("@", 1, 1), plik, "a")
+  vim.cmd("cd %:p:h")
 end
