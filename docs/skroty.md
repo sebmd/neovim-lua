@@ -57,11 +57,21 @@
 
 ## Poruszanie się po notatkach
 
+Ważne, żeby dodać zmienną systemową `$NOTES_DIR` dla powłoki BASH dodajemy do pliku `$HOME/.bashrc`:
+
+```bash
+export NOTES_DIR=$HOME/Notes
+```
+
 | Skróty       | Opis                                                                 |
 | ------------ | -------------------------------------------------------------------- |
 | `<leader>ci` | Kopiuje bieżącą linię do pliku `$NOTES_DIR/INBOX.md`                 |
 | `<leader>ci` | Kopiuje zaznaczone linie do pliku `$NOTES_DIR/INBOX.md`              |
-
+| `<leader>si` | Przenosi bieżącą linię do pliku `$NOTES_DIR/INBOX.md`                |
+| `<leader>si` | Przenosi zaznaczone linie do pliku `$NOTES_DIR/INBOX.md`             |
+| `<leader>ei` | Edycja pliku `$NOTES_DIR/INBOX.md`                                   |
+| `<leader>ee` | Wyszukiwanie plików w katalogu `$NOTES_DIR`                          |
+| `<leader>er` | Przeszukiwanie plików w katalogu `$NOTES_DIR`                        |
 
 ```lua
 -- Kopiuje bieżącą linię do pliku $NOTES_DIR/INBOX.md
