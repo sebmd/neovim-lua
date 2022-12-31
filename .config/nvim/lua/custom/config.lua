@@ -69,3 +69,5 @@ vim.opt.listchars = "nbsp:⦸,tab:▸ ,eol:¬,extends:»,precedes:«,trail:•" 
 vim.opt.showbreak = "↪"
 vim.opt.fillchars:append({ eob = " " }) -- usuwa znak ~ na końcu bufora
 vim.opt.complete:append("kspell") -- Ctrl+p w trybie INSERT podpowiedzi ze słownika wymaga włączenia trybu spell
+vim.opt.mouse = "a"
+vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,resize,winpos,terminal"

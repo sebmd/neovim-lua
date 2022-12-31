@@ -13,3 +13,4 @@
 - [rose-pine](https://github.com/rose-pine/neovim)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [undotree](https://github.com/mbbill/undotree)
+- [nvim-cursorline](https://github.com/yamatsum/nvim-cursorline)

@@ -1,5 +1,5 @@
 -- Packer
-require("custom.pluginy")
+require("custom.pluginy") -- ~/.config/nvim/lua/custom/pluginy.lua
 -- Ustawienia
 require("custom.config") -- ~/.config/nvim/lua/custom/config.lua
 require("custom.skroty") -- ~/.config/nvim/lua/custom/skroty.lua
@@ -13,3 +13,4 @@ require("custom.pluginy.nvim-tree") -- ~/.config/nvim/lua/custom/pluginy/nvim-tr
 require("custom.pluginy.kommentary") -- ~/.config/nvim/lua/custom/pluginy/kommentary.lua
 require("custom.pluginy.pears") -- ~/.config/nvim/lua/custom/pluginy/pears.lua
 require("custom.pluginy.zenmode") -- ~/.config/nvim/lua/custom/pluginy/zenmode.lua
+require("custom.pluginy.nvim-cursoline") -- ~/.config/nvim/lua/custom/pluginy/nvim-cursoline.lua
