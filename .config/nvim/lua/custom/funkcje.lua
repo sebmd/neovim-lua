@@ -103,7 +103,7 @@ FindFiles = function()
 end
 
 -- Wyszukiwanie telescope w katalogu $NOTES_DIR
-NotesDir = function()
+FindNotesDir = function()
   require("telescope.builtin").find_files({
     prompt_title = "< Notatki >",
     cwd = "$NOTES_DIR",

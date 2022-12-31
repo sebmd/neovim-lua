@@ -54,3 +54,40 @@
 | `<ctrl-j>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w dół        |
 | `<ctrl-k>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w górę       |
 | `<ctrl-h>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w prawo       |
+
+## Poruszanie się po notatkach
+
+| Skróty       | Opis                                                                 |
+| ------------ | -------------------------------------------------------------------- |
+| `<leader>ci` | Kopiuje bieżącą linię do pliku `$NOTES_DIR/INBOX.md`                 |
+| `<leader>ci` | Kopiuje zaznaczone linie do pliku `$NOTES_DIR/INBOX.md`              |
+
+
+```lua
+-- Kopiuje bieżącą linię do pliku $NOTES_DIR/INBOX.md
+vim.keymap.set("n", "<leader>ci", '<cmd>lua CopyLineToFile(os.getenv("NOTES_DIR") .. "/INBOX.md")<cr>')
+-- Kopiuje zaznaczone linie do pliku $NOTES_DIR/INBOX.md
+vim.keymap.set(
+  "x",
+  "<leader>ci",
+  ":'<,'>y<cr>:cd $NOTES_DIR<cr>:call writefile(getreg('@', 1, 1), 'INBOX.md', 'a')<cr>:cd %:p:h<cr>"
+)
+-- Przenosi bieżącą linię do $NOTES_DIR/INBOX.md
+vim.keymap.set(
+  "n",
+  "<leader>si",
+  '<cmd>lua SendLineToFile(os.getenv("NOTES_DIR") .. "/INBOX.md")<cr>'
+)
+-- Przenosi zaznaczone linie do pliku $NOTES_DIR/INBOX.md
+vim.keymap.set(
+  "x",
+  "<leader>si",
+  ":'<,'>d<cr>:cd $NOTES_DIR<cr>:call writefile(getreg('@', 1, 1), 'INBOX.md', 'a')<cr>:cd %:p:h<cr>"
+)
+-- Edycja pliku $NOTES_DIR/INBOX.md
+vim.keymap.set("n", "<leader>ei", ":e $NOTES_DIR/INBOX.md<cr>")
+-- Wyszukiwanie plików w katalogu $NOTES_DIR
+vim.keymap.set("n", "<leader>ee", "<cmd>lua FindNotesDir()<cr>")
+-- Przeszukiwanie plików w katalogu $NOTES_DIR
+vim.keymap.set("n", "<leader>er", "<cmd>lua GrepNotesDir()<cr>")
+```

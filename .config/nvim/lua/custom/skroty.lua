@@ -164,6 +164,12 @@ vim.keymap.set(
   "<leader>si",
   ":'<,'>d<cr>:cd $NOTES_DIR<cr>:call writefile(getreg('@', 1, 1), 'INBOX.md', 'a')<cr>:cd %:p:h<cr>"
 )
+-- Edycja pliku $NOTES_DIR/INBOX.md
+vim.keymap.set("n", "<leader>ei", ":e $NOTES_DIR/INBOX.md<cr>")
+-- Wyszukiwanie plików w katalogu $NOTES_DIR
+vim.keymap.set("n", "<leader>ee", "<cmd>lua FindNotesDir()<cr>")
+-- Przeszukiwanie plików w katalogu $NOTES_DIR
+vim.keymap.set("n", "<leader>er", "<cmd>lua GrepNotesDir()<cr>")
 -- Skróty dla plików help
 vim.cmd([[au Filetype help nnoremap <leader>l <c-]>]])
 vim.cmd([[au Filetype help nnoremap <leader>h <c-t>]])
