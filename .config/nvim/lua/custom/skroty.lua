@@ -14,7 +14,13 @@ vim.keymap.set("n", "<leader>C", "<cmd>enew<cr>")
 vim.keymap.set("n", "<leader>b", "<cmd>BufferPick<cr>")
 vim.keymap.set("n", "<leader>c", "<cmd>close<cr>")
 vim.keymap.set("n", "<leader>d", "<cmd>bd<cr>")
-vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>")
+-- vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>")
+vim.keymap.set(
+  "n",
+  "<leader>f",
+  "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '--follow', '-g', '!.git' }})<cr>",
+  default_opts
+)
 vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>l", "<cmd>call FileInfo()<cr>")
 vim.keymap.set("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
@@ -29,9 +35,13 @@ vim.keymap.set("n", "<leader>w", "<cmd>lua Write()<cr>")
 vim.keymap.set("n", "<leader>x", "<cmd>lua Write()<cr><cmd>q<cr>")
 vim.keymap.set("n", "<leader>z", "<cmd>q!<cr>")
 vim.keymap.set("n", "<tab>", "<cmd>e #<cr>")
+vim.keymap.set("n", "<c-_>", "<Plug>kommentary_visual_default", {})
+vim.keymap.set("x", "<c-_>", "<Plug>kommentary_visual_default", {})
 vim.keymap.set("n", "dh", "xd0")
 vim.keymap.set("n", "dl", "d$")
 vim.keymap.set("n", "gf", "<cmd>edit <cfile><cr>")
+-- Uruchamia przeglądarkę na linku pod kursorem używając przeglądarki zdefiniowanej w zmiennej $BROWSER
+vim.keymap.set("n", "gx", "<cmd>silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<cr>")
 vim.keymap.set("n", "gh", "0")
 vim.keymap.set("n", "gl", "$")
 -- vim.keymap.set("n", "H", "0")
@@ -45,7 +55,6 @@ vim.keymap.set("n", "k", "gk")
 vim.keymap.set("n", "qq", "<cmd>q<cr>")
 vim.keymap.set("n", "zm", "zn")
 vim.keymap.set("n", "zn", "zm")
-vim.keymap.set("x", "<c-_>", "<Plug>kommentary_visual_default", {})
 vim.keymap.set("x", "<leader>;", ":", { silent = false })
 vim.keymap.set("x", "gh", "0")
 vim.keymap.set("x", "gl", "$")
@@ -186,4 +195,18 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.api.nvim_command([[ nnoremap q :quit<cr> ]])
   end,
   group = "HelpMap",
+})
+-- Dublowanie linii
+-- vim.keymap.set("n", "tt", ":t.<cr>")
+-- Klonuje cały paragraf
+-- map("n", "<leader>cp", "yap<s-}>p")
+-- Klawisz `K` w plikach lua wywołuje pomoc dla wyrazu pod kursorem
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "lua" },
+  command = [[nnoremap K viwy:help <c-r>"<cr>]],
+})
+-- Klawisz `K` w plikach lua wywołuje pomoc dla wyrazu pod kursorem
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "sh" },
+  command = [[nnoremap K viwy:Man <c-r>"<cr>]],
 })
