@@ -42,6 +42,11 @@ return require("packer").startup(function(use)
   use({ "ojroques/vim-oscyank", disable = true }) -- obsługa schowka przez ssh
   use("b3nj5m1n/kommentary") -- komentarze
   use({ "jamessan/vim-gnupg", disable = false }) -- szyfrowanie
+  use("akinsho/toggleterm.nvim")
+  use("tpope/vim-eunuch")
+  use("tpope/vim-repeat")
+  use("tpope/vim-surround")
+  use("wellle/targets.vim")
   use({
     "nvim-telescope/telescope.nvim",
     -- 'nvim-telescope/telescope.nvim', tag = '0.1.0',
