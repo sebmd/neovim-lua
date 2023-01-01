@@ -17,17 +17,12 @@ Write = function()
 end
 
 -- Wyświetla informacje o pliku
-vim.api.nvim_exec(
-  [[
-    function! FileInfo()
-        let filename=resolve(expand("%:p"))
-        let msg=""
-        let msg=msg."Mod: ".strftime("%F %T",getftime(filename))." ".filename
-        echom msg
-    endfunction
-]],
-  false
-)
+FileInfo = function()
+        filename=vim.fn.resolve(vim.fn.expand("%:p"))
+        msg=""
+        msg=msg .. "Mod: " .. vim.fn.strftime("%F %T",vim.fn.getftime(filename)) .. " " .. filename
+        print(msg)
+end
 
 -- Przechodzi do katalogu edytowanego pliku i uruchamia skrypt ~/bin/gp.sh
 vim.api.nvim_exec(

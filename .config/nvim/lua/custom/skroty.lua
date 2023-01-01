@@ -21,7 +21,7 @@ vim.keymap.set(
   default_opts
 )
 vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>")
-vim.keymap.set("n", "<leader>l", "<cmd>call FileInfo()<cr>")
+vim.keymap.set("n", "<leader>l", "<cmd>lua FileInfo()<cr>")
 vim.keymap.set("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
 vim.keymap.set("n", "<leader>o", "<cmd>only<cr>")
 vim.keymap.set("n", "<leader>q", "<cmd>q<cr>")
