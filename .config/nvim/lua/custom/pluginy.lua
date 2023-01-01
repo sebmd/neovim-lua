@@ -32,7 +32,6 @@ return require("packer").startup(function(use)
   use("srcery-colors/srcery-vim")
   use("zekzekus/menguless")
   use({ "yamatsum/nvim-cursorline", disable = true })
-  use("vim-scripts/AutoComplPop")
   use("kyazdani42/nvim-web-devicons")
   use("lukas-reineke/indent-blankline.nvim")
   use({
@@ -49,6 +48,7 @@ return require("packer").startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { "nvim-lua/plenary.nvim" } },
   })
+  use("vim-scripts/AutoComplPop")
   use({ "folke/zen-mode.nvim", disable = false })
   use("folke/twilight.nvim")
   use({ "dhruvasagar/vim-table-mode", disable = false })
