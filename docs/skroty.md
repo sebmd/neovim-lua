@@ -25,6 +25,7 @@
 | `<leader>r`  | Wyświetla zawartość rejestrów `Telescope registers`                  |
 | `<leader>so` | Wczytuje źródło otwartego pliku konfiguracyjnego `%.lua`             |
 | `<leader>sp` | Dzieli ekran poziomo                                                 |
+| `<leader>t`  | Uruchamia terminal `ToggleTerm`                                      |
 | `<leader>u`  | Uruchamia rejestr zmian `UndotreeToggle`                             |
 | `<leader>v`  | Edycja plików konfiguracyjnych Neovim                                |
 | `<leader>vs` | Dzieli ekran pionowo                                                 |

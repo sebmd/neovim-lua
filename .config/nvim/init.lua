@@ -15,3 +15,4 @@ require("custom.pluginy.pears") -- ~/.config/nvim/lua/custom/pluginy/pears.lua
 require("custom.pluginy.zenmode") -- ~/.config/nvim/lua/custom/pluginy/zenmode.lua
 require("custom.pluginy.nvim-cursoline") -- ~/.config/nvim/lua/custom/pluginy/nvim-cursoline.lua
 require("custom.pluginy.indent-blankline") -- ~/.config/nvim/lua/custom/pluginy/indent-blankline.lua
+require("custom.pluginy.toggleterm") -- ~/.config/nvim/lua/custom/pluginy/toggleterm.lua
