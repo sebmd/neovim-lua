@@ -20,10 +20,10 @@ end
 vim.api.nvim_exec(
   [[
     function! FileInfo()
-	let filename=resolve(expand("%:p"))
-	let msg=""
-	let msg=msg."Mod: ".strftime("%F %T",getftime(filename))." ".filename
-	echom msg
+        let filename=resolve(expand("%:p"))
+        let msg=""
+        let msg=msg."Mod: ".strftime("%F %T",getftime(filename))." ".filename
+        echom msg
     endfunction
 ]],
   false
@@ -142,4 +142,8 @@ CopyVLineToFile = function(plik)
   -- vim.cmd("cd $NOTES_DIR")
   vim.fn.writefile(vim.fn.getreg("@", 1, 1), plik, "a")
   vim.cmd("cd %:p:h")
+end
+
+FeedKeys = function(key, mode)
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
