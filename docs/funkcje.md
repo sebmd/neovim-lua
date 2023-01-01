@@ -60,6 +60,43 @@ NvimConfig = function()
 end
 ```
 
+## Funkcja FindFiles
+
+```lua
+FindFiles = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "< Wyszukiwanie >",
+    find_command = { "rg", "--files", "--hidden", "--follow", "-g", "!.git" },
+  })
+end
+```
+
+## Funkcja FindNotesDir
+
+Wyszukiwanie telescope w katalogu $NOTES_DIR
+
+```lua
+FindNotesDir = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "< Notatki >",
+    cwd = "$NOTES_DIR",
+  })
+end
+```
+
+## Funkcja GrepNotesDir
+
+Przeszukiwanie telescope w katalogu `$NOTES_DIR`
+
+```lua
+GrepNotesDir = function()
+  require("telescope.builtin").live_grep({
+    prompt_title = "< Notatki >",
+    cwd = "$NOTES_DIR",
+  })
+end
+```
+
 ## FeedKeys
 
 - Źródło: https://www.youtube.com/@yukiuthman8358/videos
