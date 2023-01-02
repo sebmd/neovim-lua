@@ -34,3 +34,22 @@ else
     git add -A && git commit -m $DATA && git push
 fi
 ```
+
+## RevBackground
+
+Komenda wywołuje funkcję o tej samej nazwie, służy do odwrócenia kolorów z "dark" na "light" i na odwrót.
+
+```lua
+vim.api.nvim_exec(
+  [[
+    function! RevBackground()
+        if &background=="light"
+            set background=dark
+        else
+            set background=light
+        endif
+    endfunction
+]],
+  false
+)
+```
