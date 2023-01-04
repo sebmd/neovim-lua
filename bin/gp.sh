@@ -3,12 +3,8 @@
 DATA=$(date +%F-%T)
 
 if [ $# != 0 ]; then
-    echo elementów jest $#
-else
-    echo elementów jest $# (else)
+    cd "$(dirname $(readlink -m $1))"
 fi
-exit
-cd "$(dirname $(readlink -m $1))"
 
 if [ "$(basename $0)" == "gps" ]; then
     git add -A && git commit -S -m $DATA && git push
