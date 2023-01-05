@@ -1,2 +1,0 @@
-zmienna = nie
-use ({ "nvim-treesitter/nvim-treesitter", disable = false })

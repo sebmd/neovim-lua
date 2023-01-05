@@ -6,14 +6,33 @@ vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>
 vim.keymap.set("n", "gj", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
 vim.keymap.set("n", "gk", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv')
 vim.keymap.set("n", "<esc>", "<cmd>nohl<cr>", { silent = true })
+-- bufory
 vim.keymap.set("n", "<leader>,", "<cmd>bp<cr>")
 vim.keymap.set("n", "<leader>.", "<cmd>bn<cr>")
 vim.keymap.set("n", "<tab>", "<cmd>e #<cr>")
 vim.keymap.set("n", "<leader>B", "<cmd>Telescope buffers<cr>")
+vim.keymap.set("n", "<leader>Bs", "<cmd>BufferOrderByBufferNumber<cr>")
+vim.keymap.set("n", "<leader>Bd", "<cmd>BufferPickDelete<cr>")
+vim.keymap.set("n", "<leader>Bc", "<cmd>BufferCloseAllButCurrent<cr>")
 vim.keymap.set("n", "<leader>b", "<cmd>BufferPick<cr>")
 vim.keymap.set("n", "<leader>d", "<cmd>bd<cr>")
+-- okna
 vim.keymap.set("n", "<leader>o", "<cmd>only<cr>")
 vim.keymap.set("n", "<leader>c", "<cmd>close<cr>")
+-- Poruszanie się pomiędzy oknami za pomocą <c-h,j,k,l>
+vim.keymap.set("n", "<c-h>", "<c-w><c-h>")
+vim.keymap.set("n", "<c-j>", "<c-w><c-j>")
+vim.keymap.set("n", "<c-k>", "<c-w><c-k>")
+vim.keymap.set("n", "<c-l>", "<c-w><c-l>")
+-- dzielenie okien
+vim.keymap.set("n", "<leader>sp", "<cmd>sp<cr>")
+vim.keymap.set("n", "<leader>vs", "<cmd>vs<cr>")
+-- Zmiana wielkości okna
+vim.keymap.set("n", "<m-h>", "<cmd>vertical resize -2<cr>")
+vim.keymap.set("n", "<m-j>", "<cmd>resize +2<cr>")
+vim.keymap.set("n", "<m-k>", "<cmd>resize -2<cr>")
+vim.keymap.set("n", "<m-l>", "<cmd>vertical resize +2<cr>")
+--
 vim.keymap.set("n", "<leader>;", ":", { silent = false })
 vim.keymap.set("x", "<leader>;", ":", { silent = false })
 vim.keymap.set("n", "<leader>C", "<cmd>enew<cr>")
@@ -27,16 +46,14 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>l", "<cmd>lua FileInfo()<cr>")
 vim.keymap.set("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
-vim.keymap.set("n", "<leader>q", "<cmd>q<cr>")
 vim.keymap.set("n", "<leader>r", "<cmd>Telescope registers<cr>")
 vim.keymap.set("n", "<leader>so", '<cmd>luafile %<cr><cmd>echo "Plik przeładowany ..."<cr>')
-vim.keymap.set("n", "<leader>sp", "<cmd>sp<cr>")
-vim.keymap.set("n", "<leader>vs", "<cmd>vs<cr>")
 vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>")
 vim.keymap.set("n", "<leader>w", "<cmd>lua Write()<cr>")
 vim.keymap.set("n", "<leader>x", "<cmd>lua Write()<cr><cmd>q<cr>")
 vim.keymap.set("n", "<leader>z", "<cmd>q!<cr>")
+vim.keymap.set("n", "<leader>q", "<cmd>q<cr>")
 vim.keymap.set("n", "qq", "<cmd>q<cr>")
 vim.keymap.set("n", "<c-_>", "<Plug>kommentary_line_default", {})
 vim.keymap.set("x", "<c-_>", "<Plug>kommentary_visual_default", {})
@@ -78,14 +95,9 @@ vim.keymap.set("i", "<c-h>", "<left>")
 vim.keymap.set("i", "<c-j>", "<down>")
 vim.keymap.set("i", "<c-k>", "<up>")
 vim.keymap.set("i", "<c-l>", "<right>")
--- Zmiana wielkości okna
-vim.keymap.set("n", "<m-h>", "<cmd>vertical resize -2<cr>")
-vim.keymap.set("n", "<m-j>", "<cmd>resize +2<cr>")
-vim.keymap.set("n", "<m-k>", "<cmd>resize -2<cr>")
-vim.keymap.set("n", "<m-l>", "<cmd>vertical resize +2<cr>")
 -- `mm` - tworzy znacznik; `mM` - wraca na miejsce znacznika
 vim.keymap.set("n", "mm", "mm") -- tego oczywiście nie trzeba dodatkowo mapować
-vim.keymap.set("n", "mM", "`m")
+vim.keymap.set("n", "mM", "`mzvzz")
 -- Historia komend :
 vim.keymap.set("n", "q:", "<nop>")
 vim.keymap.set("n", "q:", ":Telescope command_history<cr>")
@@ -99,11 +111,6 @@ vim.keymap.set(
   "<leader>i",
   '<cmd>lua require("telescope.builtin").git_status(require("telescope.themes").get_dropdown({}))<cr>'
 )
--- Poruszanie się pomiędzy oknami za pomocą <c-h,j,k,l>
-vim.keymap.set("n", "<c-h>", "<c-w><c-h>")
-vim.keymap.set("n", "<c-j>", "<c-w><c-j>")
-vim.keymap.set("n", "<c-k>", "<c-w><c-k>")
-vim.keymap.set("n", "<c-l>", "<c-w><c-l>")
 -- Przechodzi do kolejnej / poprzedniej szukanej pozycji, dodatkowo wyśrodkowuje ekran i otwiera zagnieżdżenia
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
