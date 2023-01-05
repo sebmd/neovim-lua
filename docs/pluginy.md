@@ -14,3 +14,4 @@
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [undotree](https://github.com/mbbill/undotree)
 - [nvim-cursorline](https://github.com/yamatsum/nvim-cursorline)
+- [vim-rooter](https://github.com/airblade/vim-rooter)

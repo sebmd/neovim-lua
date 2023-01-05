@@ -16,4 +16,5 @@ require("custom.pluginy.zenmode") -- ~/.config/nvim/lua/custom/pluginy/zenmode.l
 require("custom.pluginy.nvim-cursoline") -- ~/.config/nvim/lua/custom/pluginy/nvim-cursoline.lua
 require("custom.pluginy.indent-blankline") -- ~/.config/nvim/lua/custom/pluginy/indent-blankline.lua
 require("custom.pluginy.toggleterm") -- ~/.config/nvim/lua/custom/pluginy/toggleterm.lua
-require("custom.pluginy.tree-sitter") -- ~/.config/nvim/lua/custom/pluginy/tree-sitter
+require("custom.pluginy.tree-sitter") -- ~/.config/nvim/lua/custom/pluginy/tree-sitter.lua
+require("custom.pluginy.rooter") -- ~/.config/nvim/lua/custom/pluginy/rooter.lua

@@ -71,6 +71,7 @@ return require("packer").startup(function(use)
   use("lewis6991/gitsigns.nvim")
   use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
   use("steelsojka/pears.nvim")
+  use("airblade/vim-rooter")
 
   if packer_bootstrap then
     require("packer").sync()
