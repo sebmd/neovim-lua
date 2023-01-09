@@ -1,5 +1,9 @@
 # Komendy
 
+## Colors
+
+Komenda uruchamia polecenie `Telescope colorscheme`
+
 ## GP
 
 Uruchamia funkcję `GP` wywołującą skrypt `~/bin/gp.sh`
