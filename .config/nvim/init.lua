@@ -18,3 +18,4 @@ require("custom.pluginy.indent-blankline") -- ~/.config/nvim/lua/custom/pluginy/
 require("custom.pluginy.toggleterm") -- ~/.config/nvim/lua/custom/pluginy/toggleterm.lua
 require("custom.pluginy.tree-sitter") -- ~/.config/nvim/lua/custom/pluginy/tree-sitter.lua
 require("custom.pluginy.rooter") -- ~/.config/nvim/lua/custom/pluginy/rooter.lua
+require("custom.pluginy.nvim-cmp")  -- ~/.config/nvim/lua/custom/pluginy/nvim-cmp

@@ -55,7 +55,12 @@ return require("packer").startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { "nvim-lua/plenary.nvim" } },
   })
-  use("vim-scripts/AutoComplPop")
+  use('hrsh7th/cmp-buffer')
+  use('hrsh7th/cmp-path')
+  use('hrsh7th/cmp-cmdline')
+  use('hrsh7th/nvim-cmp')
+  use({ "hrsh7th/cmp-vsnip", disable = false })
+  use({ "hrsh7th/vim-vsnip", disable = false })
   use({ "folke/zen-mode.nvim", disable = false })
   use({ "dhruvasagar/vim-table-mode", disable = false })
   use({ "vimwiki/vimwiki", disable = true })

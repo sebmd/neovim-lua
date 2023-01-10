@@ -1,0 +1,28 @@
+{
+  "hello": {
+    "prefix": "hello",
+    "body": "$BLOCK_COMMENT_START Hello World $BLOCK_COMMENT_END"
+  },
+  "filename": {
+    "prefix": ["fname"],
+    "body": "$TM_FILENAME_BASE"
+  },
+  "user": {
+    "prefix": "username",
+    "body": "${VIM:\\$USER} ${0}"
+  },
+  "email": {
+    "prefix": "email",
+    "body": "${VIM:\\$EMAIL} ${0}"
+  },
+  "gpg-id": {
+    "prefix": "gpgid",
+    "body": "${VIM:\\$GPG_ID} ${0}"
+  },
+  "uuid": {
+    "prefix": "uuid",
+    "body": [
+      "${VIM:system('python -c \"import uuid, sys;sys.stdout.write(str(uuid.uuid4()))\"')} ${0}"
+    ]
+  }
+}
