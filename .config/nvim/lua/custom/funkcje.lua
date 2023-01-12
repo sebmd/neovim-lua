@@ -49,6 +49,23 @@ vim.api.nvim_exec(
   false
 )
 
+-- Funkcja wyświetlająca pomoc
+vim.api.nvim_exec(
+  [[
+    let g:MyVimTips="off"
+    function! ToggleVimTips()
+        if g:MyVimTips == "on"
+            let g:MyVimTips="off"
+            pclose
+        else
+            let g:MyVimTips="on"
+            pedit ~/.config/nvim/docs/skroty.md
+        endif
+    endfunction
+]],
+  false
+)
+
 -- wstawia: # 2022-12-11 03:31:01
 DateHeader = function()
   local pos = vim.api.nvim_win_get_cursor(0)[2]
