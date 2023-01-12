@@ -217,12 +217,12 @@ vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()
 -- vim.keymap.set("n", "<leader>fc", "<cmd>Telescope command_history<cr>")
 --
 -- Klawisz `K` w plikach lua wywołuje pomoc dla wyrazu pod kursorem
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "lua" },
-  command = [[nnoremap K viwy:help <c-r>"<cr>]],
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+  -- pattern = { "lua" },
+  -- command = [[nnoremap K viwy:help <c-r>"<cr>]],
+-- })
 -- Klawisz `K` w plikach lua wywołuje pomoc dla wyrazu pod kursorem
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "sh" },
-  command = [[nnoremap K viwy:Man <c-r>"<cr>]],
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+  -- pattern = { "sh" },
+  -- command = [[nnoremap K viwy:Man <c-r>"<cr>]],
+-- })
