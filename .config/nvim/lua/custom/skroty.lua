@@ -76,7 +76,7 @@ vim.keymap.set("n", "zn", "zm")
 -- Mapowanie znaczników (undo) w trybie INSERT po wprowadzeniu jednego ze znaków , . ! ? ; :
 local undo_ch = { ",", ".", "!", "?", ";", ":" }
 for _, ch in ipairs(undo_ch) do
-  keymap.set("i", ch, ch .. "<c-g>u")
+  vim.keymap.set("i", ch, ch .. "<c-g>u")
 end
 -- Wyjście z trybu INSERT
 vim.keymap.set("i", "kj", "<esc>")
@@ -182,7 +182,7 @@ vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()
   ":'<,'>d<cr>:cd $notes_dir<cr>:call writefile(getreg('@', 1, 1), 'inbox.md', 'a')<cr>:cd %:p:h<cr>"
 ) ]]
 -- edycja pliku $notes_dir/inbox.md
--- vim.keymap.set("n", "<leader>ei", ":e $notes_dir/inbox.md<cr>") ]]
+-- vim.keymap.set("n", "<leader>ei", ":e $notes_dir/inbox.md<cr>")
 -- Wyszukiwanie plików w katalogu $NOTES_DIR
 -- vim.keymap.set("n", "<leader>ee", "<cmd>lua FindNotesDir()<cr>")
 -- Przeszukiwanie plików w katalogu $NOTES_DIR
@@ -206,6 +206,15 @@ vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()
 -- vim.keymap.set("n", "tt", ":t.<cr>")
 -- Klonuje cały paragraf
 -- map("n", "<leader>cp", "yap<s-}>p")
+
+-- Telescope
+-- vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+-- vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
+-- vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+-- vim.keymap.set("n", "<leader>ft", "<cmd>Telescope tags<cr>")
+-- vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+-- vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>")
+--
 -- Klawisz `K` w plikach lua wywołuje pomoc dla wyrazu pod kursorem
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "lua" },
