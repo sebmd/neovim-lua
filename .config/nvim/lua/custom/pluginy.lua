@@ -78,6 +78,8 @@ return require("packer").startup(function(use)
   use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
   use("steelsojka/pears.nvim")
   use("airblade/vim-rooter")
+  use({ "folke/which-key.nvim", disable = false })
+  use({ "mvllow/modes.nvim", disable = false })
 
   if packer_bootstrap then
     require("packer").sync()

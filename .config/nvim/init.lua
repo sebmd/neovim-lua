@@ -5,6 +5,7 @@ require("custom.config") -- ~/.config/nvim/lua/custom/config.lua
 require("custom.skroty") -- ~/.config/nvim/lua/custom/skroty.lua
 require("custom.funkcje") -- ~/.config/nvim/lua/custom/funkcje.lua
 require("custom.komendy") -- ~/.config/nvim/lua/custom/komendy.lua
+require("custom.autocmd") -- ~/.config/nvim/lua/custom/autocmd.lua
 -- Pluginy
 require("custom.pluginy.lualine") -- ~/.config/nvim/lua/custom/pluginy/lualine.lua
 require("custom.pluginy.leap") -- ~/.config/nvim/lua/custom/pluginy/leap.lua
@@ -18,4 +19,6 @@ require("custom.pluginy.indent-blankline") -- ~/.config/nvim/lua/custom/pluginy/
 require("custom.pluginy.toggleterm") -- ~/.config/nvim/lua/custom/pluginy/toggleterm.lua
 require("custom.pluginy.tree-sitter") -- ~/.config/nvim/lua/custom/pluginy/tree-sitter.lua
 require("custom.pluginy.rooter") -- ~/.config/nvim/lua/custom/pluginy/rooter.lua
-require("custom.pluginy.nvim-cmp")  -- ~/.config/nvim/lua/custom/pluginy/nvim-cmp
+require("custom.pluginy.nvim-cmp")  -- ~/.config/nvim/lua/custom/pluginy/nvim-cmp.lua
+require("custom.pluginy.which-key") -- ~/.config/nvim/lua/custom/pluginy/which-key.lua
+require("custom.pluginy.modes-nvim") -- ~/.config/nvim/lua/custom/pluginy/modes-nvim.lua

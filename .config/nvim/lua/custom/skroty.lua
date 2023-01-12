@@ -62,8 +62,9 @@ vim.keymap.set("n", "dl", "d$")
 vim.keymap.set("n", "gf", "<cmd>edit <cfile><cr>")
 -- Uruchamia przeglądarkę na linku pod kursorem używając przeglądarki zdefiniowanej w zmiennej $BROWSER
 vim.keymap.set("n", "gx", "<cmd>silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<cr>")
-vim.keymap.set("n", "gh", "0")
-vim.keymap.set("n", "gl", "$")
+vim.keymap.set({"n", "x" }, "gh", "0")
+vim.keymap.set({"n", "x" }, "gl", "$")
+vim.keymap.set({"n", "x" }, "$", "g_")  -- przechodzi do ostatniego drukowalnego znaku w linii
 -- vim.keymap.set("n", "H", "0")
 -- vim.keymap.set("n", "M", "gM")
 -- vim.keymap.set("n", "L", "$")
@@ -73,12 +74,10 @@ vim.keymap.set("n", "k", "gk")
 vim.keymap.set("n", "zm", "zn")
 vim.keymap.set("n", "zn", "zm")
 -- Mapowanie znaczników (undo) w trybie INSERT po wprowadzeniu jednego ze znaków , . ! ? ; :
-vim.keymap.set("i", ",", ",<c-g>u")
-vim.keymap.set("i", ".", ".<c-g>u")
-vim.keymap.set("i", "!", "!<c-g>u")
-vim.keymap.set("i", "?", "?<c-g>u")
-vim.keymap.set("i", ";", ";<c-g>u")
-vim.keymap.set("i", ":", ":<c-g>u")
+local undo_ch = { ",", ".", "!", "?", ";", ":" }
+for _, ch in ipairs(undo_ch) do
+  keymap.set("i", ch, ch .. "<c-g>u")
+end
 -- Wyjście z trybu INSERT
 vim.keymap.set("i", "kj", "<esc>")
 -- Poruszanie się pomiędzy zmianami w pliku
@@ -120,7 +119,7 @@ vim.keymap.set("n", "<c-u>", "<c-u>zzzv")
 -- Łączy linie pozostawiając kursor w obecnej pozycji
 vim.keymap.set("n", "J", "mzJ`z")
 -- Kopiuje cały plik
-vim.keymap.set("n", "ya", "mzggVGy`z")
+vim.keymap.set("n", "ya", "<cmd>%yank<cr>")
 -- Łatwiejsza inkrementacja i dekremenatacja liczb
 vim.keymap.set("n", "+", "<C-a>", { silent = true })
 vim.keymap.set("x", "+", "<C-a>", { silent = true })
@@ -146,11 +145,17 @@ vim.keymap.set("t", "<c-l>", "<c-\\><c-n><c-w>l")
 vim.keymap.set("c", "<c-r>p", '<c-r>"')
 -- Lista zmapowanych klawiszy
 vim.keymap.set("n", "<leader>m", ":Telescope keymaps<cr>")
+-- Kopiuje linię bez znaku końca linii
+vim.keymap.set("n", "<leader>y", "0v$hy")
+-- wkleja za lub przed bieżącą linią
+vim.keymap.set("n", "<leader>p", "m`o<ESC>p``", { desc = "wkleja poniżej bieżącej linii" })
+vim.keymap.set("n", "<leader>P", "m`O<ESC>p``", { desc = "wkleja powyżej bieżącej linii" })
 -- Usuwa zaznaczony tekst a następnie wkleja tekst ze schowka bez podmiany rejestru
 -- vim.keymap.set("x", "<leader>p", '"_dP')
--- Wkleja ostatnio skopiowany tekst, NIE usunięty, ustawiony jako ,p i ,P
+-- Wkleja ostatnio skopiowany tekst, NIE ten wycięty/usunięty, ustawiony jako ,p i ,P
 -- vim.keymap.set("n", ",p", '"0p')
 -- vim.keymap.set("n", ",P", '"0P')
+vim.keymap.set("x", "p", '"_c<Esc>p')  -- wkleja, nie podmieniając rejestru w trybie VISUAL
 -- Usuwa obiekt tekstowy nie kopiując go do standardowego rejestru
 -- vim.keymap.set("n", "<leader>d", '"-d')
 -- Edcja konfiguracji
