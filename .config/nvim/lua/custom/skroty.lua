@@ -214,6 +214,7 @@ vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()
 -- vim.keymap.set("n", "<leader>ft", "<cmd>Telescope tags<cr>")
 -- vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 -- vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>")
+-- vim.keymap.set("n", "<leader>fc", "<cmd>Telescope command_history<cr>")
 --
 -- Klawisz `K` w plikach lua wywołuje pomoc dla wyrazu pod kursorem
 vim.api.nvim_create_autocmd("FileType", {
