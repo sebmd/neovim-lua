@@ -71,5 +71,5 @@ vim.opt.fillchars:append({ eob = " " }) -- usuwa znak ~ na końcu bufora
 vim.opt.complete:append("kspell") -- Ctrl+p w trybie INSERT podpowiedzi ze słownika wymaga włączenia trybu spell
 vim.opt.mouse = "a"
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,resize,winpos,terminal"
-vim.opt.shortmess:append "sI"  -- nie wyświetla :intro
+vim.opt.shortmess:append "sI"  -- nie wyświetla ekranu startowego :intro
 vim.cmd("silent! colorscheme rose-pine")
