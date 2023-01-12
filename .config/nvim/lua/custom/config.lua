@@ -44,7 +44,7 @@ vim.opt.smartcase = true
 vim.bo.smartindent = true
 vim.opt.inccommand = "split"
 vim.opt.joinspaces = false
-vim.bo.formatoptions = "jql"  -- :h fo-table
+vim.opt.formatoptions:remove("c", "r", "o")
 vim.wo.linebreak = true
 vim.opt.list = true
 vim.opt.scrolloff = 5
