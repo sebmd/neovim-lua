@@ -1,5 +1,6 @@
 -- mapowanie klawiszy keys.lua
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
 vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv')
