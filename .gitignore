@@ -1,2 +1,3 @@
 .config/nvim/plugin/**
 .config/nvim/spell/**
+.config/nvim/lazy-lock.json

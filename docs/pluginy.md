@@ -7,7 +7,7 @@
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
-- [packer.nvim](https://github.com/wbthomason/packer.nvim)
+- [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [pears](https://github.com/steelsojka/pears.nvim)
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)

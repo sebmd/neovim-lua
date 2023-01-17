@@ -5,7 +5,7 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
 vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv')
 vim.keymap.set("n", "gj", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
-vim.keymap.set("n", "gk", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv')
+vim.keymap.set("n", "gk", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv', { silent = true })
 vim.keymap.set("n", "<esc>", "<cmd>nohl<cr>", { silent = true })
 -- bufory
 vim.keymap.set("n", "<leader>,", "<cmd>bp<cr>")
