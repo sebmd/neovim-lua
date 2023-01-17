@@ -1,4 +1,4 @@
--- AutoCMD
+-- Automatic commands
 -- Ustawia kursor tam gdzie go zostawiliśmy
 vim.cmd([[au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]])
 -- Uruchamia sprawdzanie pisowni dla wybranych typów plików

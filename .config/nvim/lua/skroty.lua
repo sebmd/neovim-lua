@@ -2,7 +2,7 @@
 -- mapowanie klawisza leader w pliku ~/.config/nvim/init.lua
 -- vim.g.mapleader = " "
 -- vim.g.maplocalleader = " "
-
+vim.keymap.set("n", "<leader>5", "<cmd>!./%<cr>")
 vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
 vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv')
 vim.keymap.set("n", "gj", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
@@ -48,6 +48,7 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>l", "<cmd>lua FileInfo()<cr>")
 vim.keymap.set("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
+vim.keymap.set("n", "<leader>N", "<cmd>NeoTreeShowToggle<cr>")
 vim.keymap.set("n", "<leader>r", "<cmd>Telescope registers<cr>")
 vim.keymap.set("n", "<leader>so", '<cmd>luafile %<cr><cmd>echo "Plik przeładowany ..."<cr>')
 vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")

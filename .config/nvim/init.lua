@@ -1,4 +1,6 @@
--- Lazy.nvim
+--
+-- INFO: SebMD/neovim-lua
+--
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -25,4 +27,4 @@ require("config") -- ~/.config/nvim/lua/config.lua
 require("skroty") -- ~/.config/nvim/lua/skroty.lua
 require("funkcje") -- ~/.config/nvim/lua/funkcje.lua
 require("komendy") -- ~/.config/nvim/lua/komendy.lua
-require("autocmd") -- ~/.config/nvim/lua/autocmd.lua
+require("autocommand") -- ~/.config/nvim/lua/autocmd.lua
