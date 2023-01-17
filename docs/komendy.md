@@ -1,6 +1,6 @@
 # Komendy
 
-## Colors
+## Kolory
 
 Komenda uruchamia polecenie `Telescope colorscheme`
 
