@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-CONFIG=~/.config/nvim/lua/custom/pluginy.lua
-TRUE="use({ \"nvim-treesitter\/nvim-treesitter\", disable = true })"
-FALSE="use({ \"nvim-treesitter\/nvim-treesitter\", disable = false })"
+CONFIG=~/.config/nvim/lua/plugins/init.lua
+TRUE="{ \"nvim-treesitter\/nvim-treesitter\", enabled = true },"
+FALSE="{ \"nvim-treesitter\/nvim-treesitter\", enabled = false },"
 
 grep "$TRUE" $CONFIG > /dev/null
 if [ $? == 0 ]; then

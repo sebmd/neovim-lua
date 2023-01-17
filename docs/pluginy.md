@@ -59,3 +59,11 @@
 - [menguless](https://github.com/zekzekus/menguless)
 - [nightfox.nvim](https://github.com/EdenEast/nightfox.nvim)
 - [twilight.nvim](https://github.com/folke/twilight.nvim)
+
+## Pluginy
+
+#### vim-vsnip
+
+**[Strona główna](https://github.com/hrsh7th/vim-vsnip/)**
+
+Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vim](https://github.com/hrsh7th/vim-vsnip/blob/master/autoload/vsnip/variable.vim)

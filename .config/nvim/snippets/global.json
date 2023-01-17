@@ -7,6 +7,11 @@
     "prefix": ["fname"],
     "body": "$TM_FILENAME_BASE"
   },
+  "ffilename": {
+    "prefix": ["ffname"],
+    "body": "${VIM:expand(\"%:p\")} ${0}",
+    "description": "Wyświetla pełną ścieżkę do pliku"
+  },
   "user": {
     "prefix": "username",
     "body": "${VIM:\\$USER} ${0}"
