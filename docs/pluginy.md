@@ -17,9 +17,10 @@
 - [neuron.nvim](https://github.com/oberblastmeister/neuron.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-cursorline](https://github.com/yamatsum/nvim-cursorline) - wyłączony
+- [nvim-neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - wyłączony
-- [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
+- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [pears.nvim](https://github.com/steelsojka/pears.nvim)
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - [targets.vim](https://github.com/wellle/targets.vim)
@@ -64,7 +65,45 @@
 
 #### [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 
-Zarządzanie górną belką buforów oraz samymi buforami
+Zarządzanie górną belką buforów, oraz samymi buforami
+
+Polecenia barbar.nvim:
+
+- BufferPin
+- BufferGoto
+- BufferLast
+- BufferMove
+- BufferNext
+- BufferPrevious
+- BufferPick
+- BufferPickDelete
+- BufferClose
+- BufferFirst
+- BufferDelete
+- BufferWipeout
+- BufferCloseAllButCurrent
+- BufferCloseAllButCurrentOrPinned
+- BufferCloseAllButPinned
+- BufferCloseAllButVisable
+- BufferCloseBufferLeft
+- BufferCloseBufferRight
+- BufferMoveNext
+- BufferMovePrevious
+- BufferMoveStart
+- BufferOrderByBufferNumber
+- BufferOrderByLanguage
+- BufferOrderByDirectory
+- BufferOrderByWindowNumber
+- BufferScrollLeft
+- BufferScrollRight
+
+#### [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+
+- https://github.com/hrsh7th/cmp-buffer
+
+#### [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
+
+- https://github.com/hrsh7th/cmp-cmdline
 
 #### [vim-vsnip](https://github.com/hrsh7th/vim-vsnip/)
 
