@@ -62,6 +62,10 @@
 
 ## Pluginy
 
+#### [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+
+Zarządzanie górną belką buforów oraz samymi buforami
+
 #### [vim-vsnip](https://github.com/hrsh7th/vim-vsnip/)
 
 Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vim](https://github.com/hrsh7th/vim-vsnip/blob/master/autoload/vsnip/variable.vim)
