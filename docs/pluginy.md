@@ -62,8 +62,6 @@
 
 ## Pluginy
 
-#### vim-vsnip
-
-**[Strona główna](https://github.com/hrsh7th/vim-vsnip/)**
+#### [vim-vsnip](https://github.com/hrsh7th/vim-vsnip/)
 
 Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vim](https://github.com/hrsh7th/vim-vsnip/blob/master/autoload/vsnip/variable.vim)
