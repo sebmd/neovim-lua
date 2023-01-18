@@ -57,3 +57,7 @@ vim.api.nvim_exec(
   false
 )
 ```
+
+## Maps
+
+Uruchamia przeglądarkę skrótów klawiszowych `:Telescope keymaps`

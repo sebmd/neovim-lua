@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# INFO: 
+
+KATALOG="$(dirname $(readlink -m $0))"
+SKRYPT="$(basename $(readlink -m $0))"
+FULL_FILE_NAME=$KATALOG/$SKRYPT
+DATA=$(date +%F-%T | tr : -)
