@@ -61,3 +61,7 @@ vim.api.nvim_exec(
 ## Maps
 
 Uruchamia przeglądarkę skrótów klawiszowych `:Telescope keymaps`
+
+## PS
+
+Aktualizacja wtyczek `:Lazy update`

@@ -28,3 +28,9 @@ require("skroty") -- ~/.config/nvim/lua/skroty.lua
 require("funkcje") -- ~/.config/nvim/lua/funkcje.lua
 require("komendy") -- ~/.config/nvim/lua/komendy.lua
 require("autocommand") -- ~/.config/nvim/lua/autocmd.lua
+
+-- Ustawienia użytkownika
+local status_ok, _ = pcall(require, "user-settings") -- ~/.config/nvim/lua/user-settings.lua
+if not status_ok then
+  return
+end
