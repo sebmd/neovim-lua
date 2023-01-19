@@ -65,3 +65,7 @@ Uruchamia przeglądarkę skrótów klawiszowych `:Telescope keymaps`
 ## PS
 
 Aktualizacja wtyczek `:Lazy update`
+
+## Docs
+
+Przeglądanie plików dokumentacji `$HOME/.config/nvim/docs`
