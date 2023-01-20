@@ -62,7 +62,7 @@
 	* [menguless](#menguless)
 	* [nightfox.nvim](#nightfox.nvim)
 	* [tokyonight.nvim](#tokyonight.nvim)
-	* [horizon.nvim](#horizon.nvim)
+	* [horizon-nvim](#horizon-nvim)
 
 <!-- vim-markdown-toc -->
 
@@ -284,84 +284,85 @@ Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vi
 
 ## Kolory
 
-### [rose-pine](https://github.com/rose-pine/neovim)
+### rose-pine
 
 - https://github.com/rose-pine/neovim
 
 ![rose-pine](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/rose-pine.png)
 
-### [nvim-base16](https://github.com/RRethy/nvim-base16)
+### nvim-base16
 
 - https://github.com/RRethy/nvim-base16
 
-### [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
+### kanagawa.nvim
 
 - https://github.com/rebelot/kanagawa.nvim
 
 ![kanagawa](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/kanagawa-nvim.png)
 
-### [ayu-vim](https://github.com/ayu-theme/ayu-vim)
+### ayu-vim
 
 - https://github.com/ayu-theme/ayu-vim
 
 ![ayu](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/ayu.png)
 
-### [gruvbox](https://github.com/gruvbox-community/gruvbox)
+### gruvbox
 
 - https://github.com/gruvbox-community/gruvbox
 
 ![gruvbox](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/gruvbox.png)
 
-### [vim-hybrid-material](https://github.com/kristijanhusak/vim-hybrid-material)
+### vim-hybrid-material
 
 - https://github.com/kristijanhusak/vim-hybrid-material
 
 ![vim-hybrid-material](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/vim-hybrid-material.png)
 
-### [vim-lighthaus](https://github.com/lighthaus-theme/vim-lighthaus)
+### vim-lighthaus
 
 - https://github.com/lighthaus-theme/vim-lighthaus
 
 ![vim-lighthaus](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/vim-lighthaus.png)
 
-### [everforest](https://github.com/sainnhe/everforest)
+### everforest
 
 - https://github.com/sainnhe/everforest
 
 ![everforest](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/everforest.png)
 
-### [gruvbox-material](https://github.com/sainnhe/gruvbox-material)
+### gruvbox-material
 
 - https://github.com/sainnhe/gruvbox-material
 
 ![gruvbox-material](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/gruvbox-material.png)
 
-### [srcery-vim](https://github.com/srcery-colors/srcery-vim.png)
+### srcery-vim
 
 - https://github.com/srcery-colors/srcery-vim
 
 ![srcery-vim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/srcery.png)
 
-### [menguless](https://github.com/zekzekus/menguless)
+### menguless
 
 - https://github.com/zekzekus/menguless
 
 ![menguless](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/menguless.png)
 
-### [nightfox.nvim](https://github.com/EdenEast/nightfox.nvim)
+### nightfox.nvim
 
 - https://github.com/EdenEast/nightfox.nvim
 
 ![nightfox.nvim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/nightfox-nvim.png)
 
-### [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+### tokyonight.nvim
 
 - https://github.com/folke/tokyonight.nvim
 
 ![tokyonight.nvim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/tokyonight-nvim.png)
 
-### [horizon.nvim](https://github.com/LunarVim/horizon.nvim)
+### horizon-nvim
+
+- https://github.com/LunarVim/horizon.nvim
 
 ![horizon.nvim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/horizon-nvim.png)
 
-- https://github.com/LunarVim/horizon.nvim
