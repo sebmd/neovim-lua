@@ -62,7 +62,7 @@
 	* [menguless](#menguless)
 	* [nightfox.nvim](#nightfox.nvim)
 	* [tokyonight.nvim](#tokyonight.nvim)
-		* [horizon.nvim](#horizon.nvim)
+	* [horizon.nvim](#horizon.nvim)
 
 <!-- vim-markdown-toc -->
 
@@ -360,7 +360,7 @@ Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vi
 
 ![tokyonight.nvim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/tokyonight-nvim.png)
 
-#### [horizon.nvim](https://github.com/LunarVim/horizon.nvim)
+### [horizon.nvim](https://github.com/LunarVim/horizon.nvim)
 
 ![horizon.nvim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/horizon-nvim.png)
 
