@@ -8,6 +8,7 @@
 * [Funkcja NvimConfig](#funkcja-nvimconfig)
 * [Funkcja Docs](#funkcja-docs)
 * [Funkcja FindFiles](#funkcja-findfiles)
+* [Funkcja FindFilesDir](#funkcja-findfilesdir)
 * [Funkcja FindNotesDir](#funkcja-findnotesdir)
 * [Funkcja GrepNotesDir](#funkcja-grepnotesdir)
 * [FeedKeys](#feedkeys)
@@ -118,6 +119,25 @@ FindFiles = function()
   require("telescope.builtin").find_files({
     prompt_title = "< Wyszukiwanie >",
     find_command = { "rg", "--files", "--hidden", "--follow", "-g", "!.git" },
+  })
+end
+```
+
+## Funkcja FindFilesDir
+
+Funkcja przeszukuje wybrany katalog, przykładowa komenda:
+
+```lua
+vim.cmd("command! FFC :lua FindFilesDir('$HOME/.config/')<cr>")
+```
+
+```lua
+FindFilesDir = function(dir)
+  require("telescope.builtin").find_files({
+    prompt_title = "< FFD >",
+    cwd = dir,
+    find_command = { "rg", "--files", "--hidden", "--follow" },
+    file_ignore_patterns = { ".git", ".png" },
   })
 end
 ```

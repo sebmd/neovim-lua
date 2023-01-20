@@ -1,5 +1,17 @@
 # Komendy
 
+<!-- vim-markdown-toc Marked -->
+
+* [Kolory](#kolory)
+* [GP](#gp)
+* [RevBackground](#revbackground)
+* [Maps](#maps)
+* [PS](#ps)
+* [Docs](#docs)
+* [FFC](#ffc)
+
+<!-- vim-markdown-toc -->
+
 ## Kolory
 
 Komenda uruchamia polecenie `Telescope colorscheme`
@@ -72,3 +84,7 @@ Aktualizacja wtyczek `:Lazy update`
 ## Docs
 
 Przeglądanie plików dokumentacji `$HOME/.config/nvim/docs`
+
+## FFC
+
+Przeszukuje katalog `$HOME/.config`

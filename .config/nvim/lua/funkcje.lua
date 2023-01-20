@@ -124,6 +124,15 @@ FindFiles = function()
   })
 end
 
+FindFilesDir = function(dir)
+  require("telescope.builtin").find_files({
+    prompt_title = "< FFD >",
+    cwd = dir,
+    find_command = { "rg", "--files", "--hidden", "--follow" },
+    file_ignore_patterns = { ".git", ".png" },
+  })
+end
+
 -- Wyszukiwanie telescope w katalogu $NOTES_DIR
 FindNotesDir = function()
   require("telescope.builtin").find_files({
