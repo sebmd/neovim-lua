@@ -51,7 +51,7 @@
 * [Kolory](#kolory)
 	* [rose-pine](#rose-pine)
 	* [nvim-base16](#nvim-base16)
-	* [kkanagawa.nvim](#kkanagawa.nvim)
+	* [kanagawa.nvim](#kanagawa.nvim)
 	* [ayu-vim](#ayu-vim)
 	* [gruvbox](#gruvbox)
 	* [vim-hybrid-material](#vim-hybrid-material)
@@ -294,11 +294,11 @@ Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vi
 
 - https://github.com/RRethy/nvim-base16
 
-### [kkanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
+### [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
 
 - https://github.com/rebelot/kanagawa.nvim
 
-![kanagawa](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/kanagawa.png)
+![kanagawa](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/kanagawa-nvim.png)
 
 ### [ayu-vim](https://github.com/ayu-theme/ayu-vim)
 
@@ -336,7 +336,7 @@ Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vi
 
 ![gruvbox-material](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/gruvbox-material.png)
 
-### [srcery-vim](https://github.com/srcery-colors/srcery-vim)
+### [srcery-vim](https://github.com/srcery-colors/srcery-vim.png)
 
 - https://github.com/srcery-colors/srcery-vim
 
