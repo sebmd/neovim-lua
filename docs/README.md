@@ -1,7 +1,7 @@
 # README
 
 - [Skróty klawiszowe](skroty.md)
-- [Pluginy](pluginy.md)
+- [Rozszerzenia](rozszerzenia.md)
 - [Komendy](komendy.md)
 - [NvimTree](nvimtree.md)
 
