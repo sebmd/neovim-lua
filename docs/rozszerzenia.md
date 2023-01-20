@@ -280,6 +280,8 @@ Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vi
 
 - https://github.com/rose-pine/neovim
 
+![rose-pine](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/rose-pine.png)
+
 ### [nvim-base16](https://github.com/RRethy/nvim-base16)
 
 - https://github.com/RRethy/nvim-base16
