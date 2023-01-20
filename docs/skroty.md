@@ -14,6 +14,7 @@
 | `<leader>b`  | Szybkie przejście pomiędzy buforami `BufferPick`                     |
 | `<leader>c`  | Zamyka bieżące okno                                                  |
 | `<leader>d`  | Usuwa bufor                                                          |
+| `<leader>D`  | Wyszukuje plików dokumentacji w `$HOME/.config/nvim/docs/`           |
 | `<leader>f`  | Wyszukiwarka plików `Telescope find_files`                           |
 | `<leader>g`  | Przeszukiwanie plików `Telescope live_grep`                          |
 | `<leader>l`  | Wyświetla informacje o pliku                                         |

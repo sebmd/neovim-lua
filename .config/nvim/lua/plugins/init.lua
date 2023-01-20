@@ -36,7 +36,7 @@ return {
     { "folke/zen-mode.nvim", enabled = true },
     { "dhruvasagar/vim-table-mode", enabled = true },
     { "vimwiki/vimwiki", enabled = false },
-    { "junegunn/vim-markdown-toc", enabled = false },
+    { "junegunn/vim-markdown-toc", enabled = true },
     { "instant-markdown/vim-instant-markdown", enabled = false },
     { "oberblastmeister/neuron.nvim", enabled = false },
     { "dhruvasagar/vim-dotoo", enabled = false },

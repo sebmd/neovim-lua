@@ -1,5 +1,21 @@
 # Funkcje
 
+<!-- vim-markdown-toc Marked -->
+
+* [Funkcja GP](#funkcja-gp)
+* [Funkcja RevBackground](#funkcja-revbackground)
+* [Funkcja DateHeader](#funkcja-dateheader)
+* [Funkcja NvimConfig](#funkcja-nvimconfig)
+* [Funkcja Docs](#funkcja-docs)
+* [Funkcja FindFiles](#funkcja-findfiles)
+* [Funkcja FindNotesDir](#funkcja-findnotesdir)
+* [Funkcja GrepNotesDir](#funkcja-grepnotesdir)
+* [FeedKeys](#feedkeys)
+* [Write](#write)
+* [FileInfo](#fileinfo)
+
+<!-- vim-markdown-toc -->
+
 ## Funkcja GP
 
 ```lua
@@ -75,6 +91,22 @@ NvimConfig = function()
     cwd = "$HOME/.config/nvim/",
     find_command = { "rg", "--files", "--follow" },
     file_ignore_patterns = { "spell/", "plugin/packer_compiled.lua", ".md" },
+  })
+end
+```
+
+## Funkcja Docs
+
+Wyszukuje pliki dokumentacji w katalogu `$HOME/.config//nvim/docs`
+
+```lua
+-- Wyszukiwanie plików w katalogu docs
+Docs = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "< DOCS >",
+    cwd = "$HOME/.config/nvim/docs/",
+    find_command = { "rg", "--files", "--follow" },
+    file_ignore_patterns = { ".png" },
   })
 end
 ```

@@ -163,6 +163,7 @@ vim.keymap.set("x", "p", '"_c<Esc>p')  -- wkleja, nie podmieniając rejestru w t
 -- vim.keymap.set("n", "<leader>d", '"-d')
 -- Edcja konfiguracji
 vim.keymap.set("n", "<leader>v", "<cmd>lua NvimConfig()<cr>")
+vim.keymap.set("n", "<leader>D", "<cmd>lua Docs()<cr>")
 vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()<CR>")
 -- Kopiuje bieżącą linię do pliku $NOTES_DIR/INBOX.md
 -- vim.keymap.set("n", "<leader>ci", '<cmd>lua CopyLineToFile(os.getenv("NOTES_DIR") .. "/INBOX.md")<cr>')
