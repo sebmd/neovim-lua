@@ -120,8 +120,8 @@ return {
                 -- Only valid with fzf previewers (bat/cat/git/etc)
                 ["f3"]          = "toggle-preview-wrap",
                 ["f4"]          = "toggle-preview",
-                ["c-j"]  = "preview-page-down",
-                ["c-k"]    = "preview-page-up",
+		["shift-down"]  = "preview-page-down",
+		["shift-up"]    = "preview-page-up",
             },
         },
         actions = {
