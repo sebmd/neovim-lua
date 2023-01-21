@@ -9,6 +9,7 @@
 * [PS](#ps)
 * [Docs](#docs)
 * [FFC](#ffc)
+* [CD](#cd)
 
 <!-- vim-markdown-toc -->
 
@@ -88,3 +89,8 @@ Przeglądanie plików dokumentacji `$HOME/.config/nvim/docs`
 ## FFC
 
 Przeszukuje katalog `$HOME/.config`
+
+## CD
+
+Wywołuje funkcję `CD`
+Poruszanie się po katalogach.

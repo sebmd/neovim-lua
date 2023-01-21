@@ -16,6 +16,19 @@ Write = function()
   end
 end
 
+-- Otwiera menadżer plików w wybranym katalogu, lista katalogów znajduje się w pliku: `$HOME/.config/bmdirs
+vim.api.nvim_exec(
+[[
+    function! CD()
+        let bmdirs = readfile(expand('$HOME/.config/bmdirs'))
+        call fzf#run(fzf#wrap({'source': bmdirs,
+            \ 'sink' : 'e',
+            \ 'options' : '-m -x +s'}))
+    endfunction
+]],
+  false
+)
+
 -- Wyświetla informacje o pliku
 FileInfo = function()
         filename=vim.fn.resolve(vim.fn.expand("%:p"))

@@ -14,6 +14,7 @@
 * [FeedKeys](#feedkeys)
 * [Write](#write)
 * [FileInfo](#fileinfo)
+* [CD](#cd)
 
 <!-- vim-markdown-toc -->
 
@@ -225,4 +226,22 @@ FileInfo = function()
   msg=msg .. "Mod: " .. vim.fn.strftime("%F %T",vim.fn.getftime(filename)) .. " " .. filename
   print(msg)
 end
+```
+
+## CD
+
+Otwiera menadżer plików w wybranym katalogu, lista katalogów znajduje się w pliku: `$HOME/.config/bmdirs
+
+```lua
+vim.api.nvim_exec(
+[[
+    function! CD()
+        let bmdirs = readfile(expand('$HOME/.config/bmdirs'))
+        call fzf#run(fzf#wrap({'source': bmdirs,
+            \ 'sink' : 'e',
+            \ 'options' : '-m -x +s'}))
+    endfunction
+]],
+  false
+)
 ```
