@@ -34,6 +34,7 @@
 | `<leader>x`  | Zapisuje zmiany i kończy pracę                                       |
 | `<leader>z`  | Wychodzi bez zapisania                                               |
 | `<leader>5`  | Uruchamia skrypt, SHELL, Python, itp.  za pomocą komendy `:!./%`     |
+| `<leader>7`  | Uruchamia sprawdzanie pisowni                                        |
 | `<tab>`      | Przechodzi pomiędzy dwoma ostatnio używanymi buforami                |
 | `:q`         | Historia komend `Telescope command_history`                          |
 | `dh`         | Usuwa od kursora do początku linii `xd0`                             |

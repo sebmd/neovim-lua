@@ -3,6 +3,7 @@
 -- vim.g.mapleader = " "
 -- vim.g.maplocalleader = " "
 vim.keymap.set("n", "<leader>5", "<cmd>!./%<cr>")
+vim.keymap.set("n", "<leader>7", "<cmd>setlocal spell! spell? spelllang=pl<cr>")
 vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
 vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv')
 vim.keymap.set("n", "gj", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
