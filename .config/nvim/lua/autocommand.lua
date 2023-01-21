@@ -18,3 +18,7 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
 vim.api.nvim_create_autocmd("FileChangedShellPost", {
   command = [[echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None]],
 })
+-- wyłącza automatyczne komentownie kolejnych linii
+vim.api.nvim_create_autocmd({ "BufNew", "BufRead" }, {
+    command = [[setlocal formatoptions-=cro]],
+})

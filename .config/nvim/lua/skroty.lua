@@ -93,6 +93,9 @@ vim.keymap.set("n", "{", "{zvzz")
 -- TAB w trybie VISUAL pozostaje w trybie VISUAL
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
+-- Przemieszczanie zaznaczonych linii
+vim.keymap.set("x", "J", ":m '>+1<cr>gv=gv")
+vim.keymap.set("x", "K", ":m '<-2<cr>gv=gv")
 -- Poruszanie się w trybie INSERT za pomocą skrótów <c-h,j,k,l>
 vim.keymap.set("i", "<c-h>", "<left>")
 vim.keymap.set("i", "<c-j>", "<down>")
@@ -154,14 +157,19 @@ vim.keymap.set("n", "<leader>y", "0v$hy")
 -- wkleja za lub przed bieżącą linią
 vim.keymap.set("n", "<leader>p", "m`o<ESC>p``", { desc = "wkleja poniżej bieżącej linii" })
 vim.keymap.set("n", "<leader>P", "m`O<ESC>p``", { desc = "wkleja powyżej bieżącej linii" })
+-- kopiuje do schowka systemowego np: <leader>yp - kopiuje paragraf do schowka systemowego
+-- vim.keymap.set("n", "<leader>y", "\"+y")
+-- vim.keymap.set("n", "<leader>Y", "\"+Y")
+-- vim.keymap.set("x", "<leader>y", "\"+y")
 -- Usuwa zaznaczony tekst a następnie wkleja tekst ze schowka bez podmiany rejestru
--- vim.keymap.set("x", "<leader>p", '"_dP')
+-- vim.keymap.set("x", "<leader>p", "\"_dP")
 -- Wkleja ostatnio skopiowany tekst, NIE ten wycięty/usunięty, ustawiony jako ,p i ,P
 -- vim.keymap.set("n", ",p", '"0p')
 -- vim.keymap.set("n", ",P", '"0P')
 vim.keymap.set("x", "p", '"_c<Esc>p')  -- wkleja, nie podmieniając rejestru w trybie VISUAL
 -- Usuwa obiekt tekstowy nie kopiując go do standardowego rejestru
--- vim.keymap.set("n", "<leader>d", '"-d')
+-- vim.keymap.set("n", "<leader>d", "\"_d")
+-- vim.keymap.set("x", "<leader>d", "\"_d")
 -- Edcja konfiguracji
 vim.keymap.set("n", "<leader>v", "<cmd>lua NvimConfig()<cr>")
 vim.keymap.set("n", "<leader>D", "<cmd>lua Docs()<cr>")
