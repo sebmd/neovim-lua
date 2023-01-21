@@ -22,3 +22,7 @@ vim.api.nvim_create_autocmd("FileChangedShellPost", {
 vim.api.nvim_create_autocmd({ "BufNew", "BufRead" }, {
     command = [[setlocal formatoptions-=cro]],
 })
+-- wchodzi w tryb INSERT przy otworzeniu NOWEGO pliku
+vim.api.nvim_create_autocmd({ "BufNewFile" }, {
+    command = [[startinsert]],
+})

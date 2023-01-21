@@ -1,3 +1,4 @@
+-- fzf-lua
 return {
     "ibhagwan/fzf-lua",
     config = function(plugin)

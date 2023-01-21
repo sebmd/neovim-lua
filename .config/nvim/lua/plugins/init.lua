@@ -1,3 +1,4 @@
+-- init plugins
 return {
     { "rose-pine/neovim", enabled = true },
     { "RRethy/nvim-base16", enabled = true },
