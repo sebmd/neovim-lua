@@ -415,7 +415,7 @@ Tryb skupienia. Usuwa zbędne wodotryski.
 
 - https://github.com/srcery-colors/srcery-vim
 
-![srcery-vim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/srcery.png)
+![srcery-vim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/srcery-vim.png)
 
 ### menguless
 
