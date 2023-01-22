@@ -1,4 +1,4 @@
--- mapowanie klawiszy keys.lua
+-- mapowanie klawiszy mappings.lua
 -- mapowanie klawisza leader w pliku ~/.config/nvim/init.lua
 -- vim.g.mapleader = " "
 -- vim.g.maplocalleader = " "

@@ -15,7 +15,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
--- mapowanie klawisza leader
+-- ustawienie klawisza leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -24,10 +24,10 @@ require("lazy").setup('plugins')
 
 -- Ustawienia
 require("options") -- ~/.config/nvim/lua/options.lua
-require("skroty") -- ~/.config/nvim/lua/skroty.lua
+require("mappings") -- ~/.config/nvim/lua/mappings.lua
 require("funkcje") -- ~/.config/nvim/lua/funkcje.lua
 require("komendy") -- ~/.config/nvim/lua/komendy.lua
-require("autocommand") -- ~/.config/nvim/lua/autocmd.lua
+require("autocommands") -- ~/.config/nvim/lua/autocommands.lua
 
 -- Ustawienia użytkownika
 local status_ok, _ = pcall(require, "user-settings") -- ~/.config/nvim/lua/user-settings.lua
