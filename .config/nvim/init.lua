@@ -25,8 +25,8 @@ require("lazy").setup('plugins')
 -- Ustawienia
 require("options") -- ~/.config/nvim/lua/options.lua
 require("mappings") -- ~/.config/nvim/lua/mappings.lua
-require("funkcje") -- ~/.config/nvim/lua/funkcje.lua
-require("komendy") -- ~/.config/nvim/lua/komendy.lua
+require("functions") -- ~/.config/nvim/lua/functions.lua
+require("commands") -- ~/.config/nvim/lua/commands.lua
 require("autocommands") -- ~/.config/nvim/lua/autocommands.lua
 
 -- Ustawienia użytkownika
