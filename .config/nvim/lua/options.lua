@@ -1,4 +1,4 @@
--- config.lua ustawienia
+-- options.lua ustawienia
 vim.wo.number = true -- wyświetlanie numerów linii
 vim.wo.relativenumber = true -- wyświetlanie relatywnych numerów linii
 vim.opt.numberwidth = 5 -- ustawia szerokość kolumny numerowania linii

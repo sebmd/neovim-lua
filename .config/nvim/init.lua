@@ -23,7 +23,7 @@ vim.g.maplocalleader = " "
 require("lazy").setup('plugins')
 
 -- Ustawienia
-require("config") -- ~/.config/nvim/lua/config.lua
+require("options") -- ~/.config/nvim/lua/options.lua
 require("skroty") -- ~/.config/nvim/lua/skroty.lua
 require("funkcje") -- ~/.config/nvim/lua/funkcje.lua
 require("komendy") -- ~/.config/nvim/lua/komendy.lua
