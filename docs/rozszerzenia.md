@@ -3,6 +3,7 @@
 <!-- vim-markdown-toc Marked -->
 
 * [Pluginy](#pluginy)
+    * [alpha-nvim](#alpha-nvim)
     * [barbar.nvim](#barbar.nvim)
     * [cmp-buffer](#cmp-buffer)
     * [cmp-cmdline](#cmp-cmdline)
@@ -67,6 +68,10 @@
 <!-- vim-markdown-toc -->
 
 ## Pluginy
+
+### [alpha-nvim](https://github.com/goolord/alpha-nvim)
+
+- Tablica startowa `:Alpha`
 
 ### [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 

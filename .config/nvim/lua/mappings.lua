@@ -4,10 +4,10 @@
 -- vim.g.maplocalleader = " "
 vim.keymap.set("n", "<leader>5", "<cmd>!./%<cr>")
 vim.keymap.set("n", "<leader>7", "<cmd>setlocal spell! spell? spelllang=pl<cr>")
-vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
-vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv')
-vim.keymap.set("n", "gj", '<cmd>lua require"gitsigns.actions".next_hunk()<CR>zv')
-vim.keymap.set("n", "gk", '<cmd>lua require"gitsigns.actions".prev_hunk()<CR>zv', { silent = true })
+vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<cr>zv')
+vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<cr>zv')
+vim.keymap.set("n", "gj", '<cmd>lua require"gitsigns.actions".next_hunk()<cr>zv')
+vim.keymap.set("n", "gk", '<cmd>lua require"gitsigns.actions".prev_hunk()<cr>zv', { silent = true })
 vim.keymap.set("n", "<esc>", "<cmd>nohl<cr>", { silent = true })
 -- bufory
 vim.keymap.set("n", "<leader>,", "<cmd>bp<cr>")
@@ -172,7 +172,20 @@ vim.keymap.set("x", "p", '"_c<Esc>p')  -- wkleja, nie podmieniając rejestru w t
 -- vim.keymap.set("x", "<leader>d", "\"_d")
 -- Edcja konfiguracji
 vim.keymap.set("n", "<leader>v", "<cmd>lua NvimConfig()<cr>")
+-- Przeszukiwanie dokuentacji
 vim.keymap.set("n", "<leader>D", "<cmd>lua Docs()<cr>")
+-- Obsługa pluginu vim-surround
+-- <leader>sw czeka na wprowadzenie znaku, którym otoczy wyraz
+-- <leader>sW czeka na wprowadzenie znaku, którym otoczy WYRAZ
+-- <leader>sp czeka na wprowadzenie znaku, który otoczy paragraf
+-- <leader>ss czeka na wprowadzenie znaku, którym otoczy linię
+-- <leader>sd czeka na wprowadzenie znaku, którym zostanie usunięty
+vim.keymap.set("n", "<leader>sw", ":norm ysiw")
+vim.keymap.set("n", "<leader>sW", ":norm ysiW")
+vim.keymap.set("n", "<leader>ssp", ":norm ysip")
+vim.keymap.set("n", "<leader>ss", ":norm yss")
+vim.keymap.set("n", "<leader>sdd", ":norm ds")
+-- Sugestie sprawdzania pisowni
 vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()<CR>")
 -- Kopiuje bieżącą linię do pliku $NOTES_DIR/INBOX.md
 -- vim.keymap.set("n", "<leader>ci", '<cmd>lua CopyLineToFile(os.getenv("NOTES_DIR") .. "/INBOX.md")<cr>')

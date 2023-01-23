@@ -191,3 +191,13 @@ end
 FeedKeys = function(key, mode)
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
+
+-- Kopiuje nazwę pliku + ścieżkę do rejestru '"'
+vim.api.nvim_exec(
+[[
+    function! CopyFileName()
+        let @" = resolve(expand("%:p"))
+    endfunction
+]],
+  false
+)

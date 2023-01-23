@@ -15,6 +15,7 @@
 * [Write](#write)
 * [FileInfo](#fileinfo)
 * [CD](#cd)
+* [CopyFileName](#copyfilename)
 
 <!-- vim-markdown-toc -->
 
@@ -240,6 +241,21 @@ vim.api.nvim_exec(
         call fzf#run(fzf#wrap({'source': bmdirs,
             \ 'sink' : 'e',
             \ 'options' : '-m -x +s'}))
+    endfunction
+]],
+  false
+)
+```
+
+## CopyFileName
+
+Kopiuje nazwę pliku + ścieżkę do rejestru `"`
+
+```lua
+vim.api.nvim_exec(
+[[
+    function! CopyFileName()
+        let @" = resolve(expand("%:p"))
     endfunction
 ]],
   false

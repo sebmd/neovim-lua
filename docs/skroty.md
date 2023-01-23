@@ -59,6 +59,16 @@
 | `<ctrl-k>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w górę       |
 | `<ctrl-h>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w prawo       |
 
+## Plugin tpope/vim-surround
+
+| Skróty       | Opis                                                                 |
+| ------------ | ---------------------------------------------------------|
+| `<leader>sw` | Czeka na wprowadzenie znaku, którym otoczy wyraz         |
+| `<leader>sW` | Czeka na wprowadzenie znaku, którym otoczy WYRAZ         |
+| `<leader>sp` | Czeka na wprowadzenie znaku, który otoczy paragraf       |
+| `<leader>ss` | Czeka na wprowadzenie znaku, którym otoczy linię         |
+| `<leader>sd` | Czeka na wprowadzenie znaku, którym zostanie usunięty    |
+
 ## Poruszanie się po notatkach
 
 Ważne, żeby dodać zmienną systemową `$NOTES_DIR` dla powłoki BASH dodajemy do pliku `$HOME/.bashrc`:

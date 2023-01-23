@@ -2,3 +2,4 @@
 .config/nvim/spell/**
 .config/nvim/lazy-lock.json
 .config/nvim/lua/user-settings.lua
+.config/nvim/colors/**

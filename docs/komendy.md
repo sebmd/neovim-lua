@@ -10,6 +10,7 @@
 * [Docs](#docs)
 * [FFC](#ffc)
 * [CD](#cd)
+* [CopyFileName](#copyfilename)
 
 <!-- vim-markdown-toc -->
 
@@ -94,3 +95,7 @@ Przeszukuje katalog `$HOME/.config`
 
 Wywołuje funkcję `CD`
 Poruszanie się po katalogach.
+
+## CopyFileName
+
+Kopiuje nazwę pliku + ścieżkę do rejestru `"`

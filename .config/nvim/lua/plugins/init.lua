@@ -37,6 +37,7 @@ return {
     { "hrsh7th/vim-vsnip", enabled = true },
     { "folke/zen-mode.nvim", enabled = true },
     { "folke/twilight.nvim", enabled = true },
+    { "liuchengxu/vista.vim", enabled = true },
     { "dhruvasagar/vim-table-mode", enabled = true },
     { "vimwiki/vimwiki", enabled = false },
     { "junegunn/vim-markdown-toc", enabled = true },

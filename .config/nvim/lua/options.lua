@@ -9,8 +9,8 @@ vim.wo.conceallevel = 0 -- sprawia, że znaki `` są widzialne w plikach Markdow
 vim.bo.textwidth = 100 -- szerokość linii
 vim.wo.colorcolumn = "+1"
 vim.wo.cursorline = true
-vim.bo.fileencoding = "utf-8"
-vim.bo.fileformat = "unix"
+-- vim.bo.fileencoding = "utf-8"
+-- vim.bo.fileformat = "unix"
 vim.opt.encoding = "utf-8"
 vim.wo.foldcolumn = "1"
 vim.wo.foldmethod = "marker"
@@ -71,5 +71,5 @@ vim.opt.fillchars:append({ eob = " " }) -- usuwa znak ~ na końcu bufora
 vim.opt.complete:append("kspell") -- Ctrl+p w trybie INSERT podpowiedzi ze słownika wymaga włączenia trybu spell
 vim.opt.mouse = "a"
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,resize,winpos,terminal"
-vim.opt.shortmess:append "sI"  -- nie wyświetla ekranu startowego :intro
+-- vim.opt.shortmess:append "sI"  -- nie wyświetla ekranu startowego :intro
 vim.cmd("silent! colorscheme rose-pine")
