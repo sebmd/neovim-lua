@@ -47,6 +47,7 @@
     * [vim-table-mode](#vim-table-mode)
     * [vim-vsnip](#vim-vsnip)
     * [vimwiki](#vimwiki)
+* [[Vista]](#[vista])
     * [which-key.nvim](#which-key.nvim)
     * [zen-mode.nvim](#zen-mode.nvim)
 * [Kolory](#kolory)
@@ -72,6 +73,8 @@
 ### [alpha-nvim](https://github.com/goolord/alpha-nvim)
 
 - Tablica startowa `:Alpha`
+
+![alpha-nvim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/alpha.png)
 
 ### [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 
@@ -349,6 +352,12 @@ Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vi
 - https://github.com/vimwiki/vimwiki
 
 Wiki oparte na plikach tekstowych.
+
+## [Vista]
+
+- https://github.com/folke/liuchengxu/vista.vim
+
+![vista](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/vista.png)
 
 ### [which-key.nvim](https://github.com/folke/which-key.nvim)
 

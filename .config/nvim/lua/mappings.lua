@@ -104,6 +104,8 @@ vim.keymap.set("i", "<c-l>", "<right>")
 -- `mm` - tworzy znacznik; `mM` - wraca na miejsce znacznika
 vim.keymap.set("n", "mm", "mm") -- tego oczywiście nie trzeba dodatkowo mapować
 vim.keymap.set("n", "mM", "`mzvzz")
+-- Uruchomienie panelu bocznego Vista
+vim.keymap.set("n", "<leader>V", "<cmd>Vista<cr>")
 -- Historia komend :
 vim.keymap.set("n", "q:", "<nop>")
 vim.keymap.set("n", "q:", ":Telescope command_history<cr>")
