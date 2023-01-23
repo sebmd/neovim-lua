@@ -45,7 +45,7 @@ config = {
         },
         -- theme = "gruvbox_dark",
         -- disabled_filetypes = { "CHADTree", "NvimTree", "toggleterm", "dashboard" },
-        disabled_filetypes = { "CHADTree", "toggleterm", "dashboard" },
+        disabled_filetypes = { "CHADTree", "toggleterm", "dashboard", "alpha" },
     },
     sections = {
         -- these are to remove the defaults
