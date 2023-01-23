@@ -47,7 +47,7 @@
     * [vim-table-mode](#vim-table-mode)
     * [vim-vsnip](#vim-vsnip)
     * [vimwiki](#vimwiki)
-* [[Vista]](#[vista])
+    * [Vista](#vista)
     * [which-key.nvim](#which-key.nvim)
     * [zen-mode.nvim](#zen-mode.nvim)
 * [Kolory](#kolory)
@@ -353,7 +353,7 @@ Zmienne używane przy tworzeniu snippetów można znaleźć w pliku [variable.vi
 
 Wiki oparte na plikach tekstowych.
 
-## [Vista]
+### Vista
 
 - https://github.com/folke/liuchengxu/vista.vim
 
