@@ -21,6 +21,8 @@ return {
     { "nvim-lualine/lualine.nvim", dependencies = "nvim-tree/nvim-web-devicons", enabled = true },
     { "Jorengarenar/fauxClip", enabled = true },
     { "ojroques/vim-oscyank", enabled = true },
+    { "MattesGroeger/vim-bookmarks", enabled = true },
+    { "tom-anders/telescope-vim-bookmarks.nvim", enabled = true },
     { "b3nj5m1n/kommentary", enabled = true },
     { "jamessan/vim-gnupg", enabled = true },
     { "akinsho/toggleterm.nvim", enabled = true },

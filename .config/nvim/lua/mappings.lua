@@ -102,8 +102,15 @@ vim.keymap.set("i", "<c-j>", "<down>")
 vim.keymap.set("i", "<c-k>", "<up>")
 vim.keymap.set("i", "<c-l>", "<right>")
 -- `mm` - tworzy znacznik; `mM` - wraca na miejsce znacznika
-vim.keymap.set("n", "mm", "mm") -- tego oczywiście nie trzeba dodatkowo mapować
-vim.keymap.set("n", "mM", "`mzvzz")
+-- vim.keymap.set("n", "mm", "mm") -- tego oczywiście nie trzeba dodatkowo mapować
+-- vim.keymap.set("n", "mM", "`mzvzz")
+vim.keymap.set("n", "mm", "<cmd>BookmarkToggle<cr>")
+vim.keymap.set("n", "ma", "<cmd>BookmarkAnnotate<cr>")
+-- vim.keymap.set("n", "mA", "<cmd>BookmarkShowAll<cr>")
+vim.keymap.set("n", "mn", "<cmd>BookmarkNext<cr>")
+vim.keymap.set("n", "mp", "<cmd>BookmarkPrev<cr>")
+vim.keymap.set("n", "mc", "<cmd>BookmarkClearAll<cr>")
+vim.keymap.set("n", "ml", "<cmd>BookmarkMoveToLine<cr>")
 -- Uruchomienie panelu bocznego Vista
 vim.keymap.set("n", "<leader>V", "<cmd>Vista<cr>")
 -- Historia komend :
@@ -153,7 +160,7 @@ vim.keymap.set("t", "<c-l>", "<c-\\><c-n><c-w>l")
 -- Wklejanie w linii komend
 vim.keymap.set("c", "<c-r>p", '<c-r>"')
 -- Lista zmapowanych klawiszy
-vim.keymap.set("n", "<leader>m", ":Telescope keymaps<cr>")
+-- vim.keymap.set("n", "<leader>m", ":Telescope keymaps<cr>")
 -- Kopiuje linię bez znaku końca linii
 vim.keymap.set("n", "<leader>y", "0v$hy")
 -- wkleja za lub przed bieżącą linią
@@ -187,6 +194,9 @@ vim.keymap.set("n", "<leader>sW", ":norm ysiW")
 vim.keymap.set("n", "<leader>ssp", ":norm ysip")
 vim.keymap.set("n", "<leader>ss", ":norm yss")
 vim.keymap.set("n", "<leader>sdd", ":norm ds")
+-- Telescope recent files, bookmarks
+vim.keymap.set("n", "<leader>m", require('telescope').extensions.vim_bookmarks.all, {})
+vim.keymap.set("n", "<leader>M", require('telescope').extensions.vim_bookmarks.current_file, {})
 -- Sugestie sprawdzania pisowni
 vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()<CR>")
 -- Kopiuje bieżącą linię do pliku $NOTES_DIR/INBOX.md

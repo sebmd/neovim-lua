@@ -10,6 +10,7 @@ return {
 	        dashboard.button("r", "  Ostation używane pliki", "<cmd>Telescope oldfiles<cr>"),
 	        dashboard.button("f", "  Wyszukiwanie plików", "<cmd>lua FindFiles()<cr>"),
 	        dashboard.button("g", "  Przeszukiwanie plików", "<cmd>Telescope live_grep<cr>"),
+            dashboard.button("B", "B  Bookmarks", "<cmd>lua require('telescope').extensions.vim_bookmarks.all()<cr>"),
 	        dashboard.button("b", "  Skrypty ~/.bin", "<cmd>lua FindFilesDir('$HOME/bin')<cr>"),
 	        dashboard.button("c", "  Pliki konfiguracyjne ~/.config", "<cmd>lua FindFilesDir('$HOME/.config')<cr>"),
 	        dashboard.button("v", "  Konfiguracja Neovim", "<cmd>lua NvimConfig()<cr>"),
