@@ -58,26 +58,45 @@
 | `zn`         | Otwiera zagnieżdżony tekst`zm`                                       |
 | `ya`         | Kopiuje cały plik                                                    |
 | `<leader>y`  | Kopiuje linię bez znaku końca linii                                  |
-| `<ctrl-r>p`  | **COMMAND** wkleja zawartość schowka w linii komend                  |
 | `s`          | Wyszukiwanie w dół, lini, zawierającej wskazany znak (Leap)          |
 | `S`          | Wyszukiwanie w górę lini, zawierającej wskazany znak (Leap)          |
 | `<ctrl-/>`   | Wstawia znak komentarza na początku linii (kommentary)               |
-| `J`          | **VISUAL** przeniesienie zaznaczonych linii niżej                    |
-| `K`          | **VISUAL** przeniesienie zaznaczonych linii wyżej                    |
-| `kj`         | W trybie **INSERT** zastępuje klawisz **ESC**                        |
-| `<ctrl-h>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w lewo        |
-| `<ctrl-j>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w dół        |
-| `<ctrl-k>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w górę       |
-| `<ctrl-l>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w prawo       |
-| `<ctrl-h>`   | W trybie **NORMAL** przechodzi do okna po lewej                      |
-| `<ctrl-j>`   | W trybie **NORMAL** przechodzi do okna poniżej                       |
-| `<ctrl-k>`   | W trybie **NORMAL** przechodzi do okna powyżej                       |
-| `<ctrl-l>`   | W trybie **NORMAL** przechodzi do okna po lewej                      |
+| `<ctrl-h>`   | Przechodzi do okna po lewej                                          |
+| `<ctrl-j>`   | Przechodzi do okna poniżej                                           |
+| `<ctrl-k>`   | Przechodzi do okna powyżej                                           |
+| `<ctrl-l>`   | Przechodzi do okna po lewej                                          |
 | `<alt-h>`    | Powieksza szerokość aktywnego okn                                    |
 | `<alt-j>`    | Powiększa wysokość aktywnego okna                                    |
 | `<alt-k>`    | Pomniejsza wysokość aktywnego okna                                   |
 | `<alt-l>`    | Pomniejsza szerokość aktywnego okna                                  |
 | `<leader>ze` | Uruchamia tryb ZenMode                                               |
+
+## Tryb VISUAL
+
+| Skróty       | Opis                                                      |
+| ------------ | --------------------------------------------------------- |
+| `J`          | Przeniesienie zaznaczonych linii niżej                    |
+| `K`          | Przeniesienie zaznaczonych linii wyżej                    |
+
+## Tryb COMMAND
+
+| Skróty       | Opis                                                      |
+| ------------ | --------------------------------------------------------- |
+| `<ctrl-r>p`  | Wkleja zawartość schowka w linii komend                   |
+| `<ctrl-h>`   | Przechodzi o znak w lewo                                  |
+| `<ctrl-j>`   | Poruszanie się w historii poleceń                         |
+| `<ctrl-k>`   | Poruszanie się w historii poleceń                         |
+| `<ctrl-l>`   | Przechodzi o znak w prawo                                 |
+
+## Tryb INSERT
+
+| Skróty       | Opis                                                      |
+| ------------ | --------------------------------------------------------- |
+| `kj`         | Zastępuje klawisz **ESC**                                 |
+| `<ctrl-h>`   | Przechodzi o znak w lewo                                  |
+| `<ctrl-j>`   | Przechodzi o linię w dół                                  |
+| `<ctrl-k>`   | Przechodzi o linię w górę                                 |
+| `<ctrl-l>`   | Przechodzi o znak w prawo                                 |
 
 ## Plugin vim-bookmarks
 
