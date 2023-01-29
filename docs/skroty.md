@@ -10,10 +10,13 @@
 | `<leader>.`  | Przechodzi do następnego bufora                                      |
 | `<leader>;`  | Wchodzi do trybu **COMMAND**                                         |
 | `<leader>B`  | Wyszukiwarka buforów `Telescobe buffers`                             |
-| `<leader>C`  | Otwiera pusty bufor                                                  |
+| `<leader>Bs` | Sortowanie buforów po numerze `BufferOrderByBufferNumber`            |
+| `<leader>Bd` | Usuwa wybrany bufor `BufferPickDelete`                               |
+| `<leader>Bc` | Zamyka wszystkie bufory oprócz aktywnego `BufferCloseAllButCurrent   |
 | `<leader>b`  | Szybkie przejście pomiędzy buforami `BufferPick`                     |
-| `<leader>c`  | Zamyka bieżące okno                                                  |
+| `<leader>C`  | Otwiera pusty bufor                                                  |
 | `<leader>d`  | Usuwa bufor                                                          |
+| `<leader>c`  | Zamyka bieżące okno                                                  |
 | `<leader>D`  | Wyszukuje plików dokumentacji w `$HOME/.config/nvim/docs/`           |
 | `<leader>f`  | Wyszukiwarka plików `Telescope find_files`                           |
 | `<leader>g`  | Przeszukiwanie plików `Telescope live_grep`                          |
@@ -26,10 +29,10 @@
 | `<leader>r`  | Wyświetla zawartość rejestrów `Telescope registers`                  |
 | `<leader>so` | Wczytuje źródło otwartego pliku konfiguracyjnego `%.lua`             |
 | `<leader>sp` | Dzieli ekran poziomo                                                 |
+| `<leader>vs` | Dzieli ekran pionowo                                                 |
 | `<leader>t`  | Uruchamia terminal `ToggleTerm`                                      |
 | `<leader>u`  | Uruchamia rejestr zmian `UndotreeToggle`                             |
 | `<leader>v`  | Edycja plików konfiguracyjnych Neovim                                |
-| `<leader>vs` | Dzieli ekran pionowo                                                 |
 | `<leader>w`  | Zapisuje zmiany w pliku jeśli takie miały miejsce                    |
 | `<leader>x`  | Zapisuje zmiany i kończy pracę                                       |
 | `<leader>z`  | Wychodzi bez zapisania                                               |
@@ -57,7 +60,11 @@
 | `<ctrl-h>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w lewo        |
 | `<ctrl-j>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w dół        |
 | `<ctrl-k>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w górę       |
-| `<ctrl-h>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w prawo       |
+| `<ctrl-l>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w prawo       |
+| `<ctrl-h>`   | W trybie **NORMAL** przechodzi do okna po lewej                      |
+| `<ctrl-j>`   | W trybie **NORMAL** przechodzi do okna poniżej                       |
+| `<ctrl-k>`   | W trybie **NORMAL** przechodzi do okna powyżej                       |
+| `<ctrl-l>`   | W trybie **NORMAL** przechodzi do okna po lewej                      |
 
 ## Plugin tpope/vim-surround
 
