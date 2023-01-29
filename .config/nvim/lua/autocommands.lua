@@ -11,6 +11,7 @@ vim.cmd([[
 -- Otwiera okno pomocy w podziale pionowym
 vim.cmd([[au FileType help wincmd L]])
 -- Automatically update changed file in Vim
+-- https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
   command = [[silent! if mode() != 'c' && !bufexists("[Command Line]") | checktime | endif]],
 })
