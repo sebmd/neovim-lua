@@ -21,8 +21,11 @@
 | `<leader>f`  | Wyszukiwarka plików `Telescope find_files`                           |
 | `<leader>g`  | Przeszukiwanie plików `Telescope live_grep`                          |
 | `<leader>l`  | Wyświetla informacje o pliku                                         |
-| `<leader>m`  | Wyświetla listę zmapowanych klawiszy `Telescope keymaps`             |
+| `<leader>m`  | Wyświetla listę znaczników za pomocą `Telescope`                     |
+| `<leader>M`  | Wyświetla listę znaczników w bieżącym pliku za pomocą `Telescope`    |
+| `<leader>i`  | Uruchamia `Telescope git_status`                                     |
 | `<leader>n`  | Menadżer plików `NvimTree`                                           |
+| `<leader>n`  | Menadżer plików `NeoTree`                                            |
 | `<leader>o`  | Zamyka wszystkie okna poza bieżącym                                  |
 | `<leader>p`  | Lista projektów `Telescope project`                                  |
 | `<leader>q`  | Kończy pracę `:q`                                                    |
@@ -33,29 +36,34 @@
 | `<leader>t`  | Uruchamia terminal `ToggleTerm`                                      |
 | `<leader>u`  | Uruchamia rejestr zmian `UndotreeToggle`                             |
 | `<leader>v`  | Edycja plików konfiguracyjnych Neovim                                |
+| `<leader>V`  | Uruchamia plugin Vista                                               |
 | `<leader>w`  | Zapisuje zmiany w pliku jeśli takie miały miejsce                    |
 | `<leader>x`  | Zapisuje zmiany i kończy pracę                                       |
 | `<leader>z`  | Wychodzi bez zapisania                                               |
 | `<leader>5`  | Uruchamia skrypt, SHELL, Python, itp.  za pomocą komendy `:!./%`     |
 | `<leader>7`  | Uruchamia sprawdzanie pisowni                                        |
 | `<tab>`      | Przechodzi pomiędzy dwoma ostatnio używanymi buforami                |
-| `:q`         | Historia komend `Telescope command_history`                          |
+| `q:`         | Historia komend `Telescope command_history`                          |
+| `<leader>hc` | Historia komend `Telescope command_history`                          |
 | `dh`         | Usuwa od kursora do początku linii `xd0`                             |
 | `dl`         | Usuwa od kursora do końca linii `d$`                                 |
 | `gf`         | Otwiera / tworzy plik pod kursorem                                   |
+| `gx`         | Otwiera link WWW w przeglądarce internetowej                         |
 | `gh`         | Przechodzi na początek linii `0`                                     |
 | `gj`         | Przechodzi do następnej zmiany (Gitsigns)                            |
-| `gk`         | Przechodzi do poprzedniej zmiany (Gitsigns)                          |
 | `gl`         | Przechodzi na koniec linii `$`                                       |
 | `gs`         | Podpowiedzi sprawdzania pisowni                                      |
 | `qq`         | Kończy pracę `:q`                                                    |
 | `zm`         | Zamyka zagnieżdżony tekst `zn`                                       |
 | `zn`         | Otwiera zagnieżdżony tekst`zm`                                       |
-| `s`          | Przechodzi do linii niżej, zawierającej wskazany znak (Leap)         |
-| `S`          | Przechodzi do linii wyżej, zawierającej wskazany znak (Leap)         |
+| `ya`         | Kopiuje cały plik                                                    |
+| `<leader>y`  | Kopiuje linię bez znaku końca linii                                  |
+| `<ctrl-r>p`  | **COMMAND** wkleja zawartość schowka w linii komend                  |
+| `s`          | Wyszukiwanie w dół, lini, zawierającej wskazany znak (Leap)          |
+| `S`          | Wyszukiwanie w górę lini, zawierającej wskazany znak (Leap)          |
 | `<ctrl-/>`   | Wstawia znak komentarza na początku linii (kommentary)               |
-| `j`          | Zamienia na `gj` - poruszanie się po zawijanych liniach              |
-| `k`          | Zamienia na `gk` - poruszanie się po zawijanych liniach              |
+| `J`          | **VISUAL** przeniesienie zaznaczonych linii niżej                    |
+| `K`          | **VISUAL** przeniesienie zaznaczonych linii wyżej                    |
 | `kj`         | W trybie **INSERT** zastępuje klawisz **ESC**                        |
 | `<ctrl-h>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o znak w lewo        |
 | `<ctrl-j>`   | W trybie **INSERT** oraz **COMMAND** przechodzi o linię w dół        |
@@ -65,16 +73,32 @@
 | `<ctrl-j>`   | W trybie **NORMAL** przechodzi do okna poniżej                       |
 | `<ctrl-k>`   | W trybie **NORMAL** przechodzi do okna powyżej                       |
 | `<ctrl-l>`   | W trybie **NORMAL** przechodzi do okna po lewej                      |
+| `<alt-h>`    | Powieksza szerokość aktywnego okn                                    |
+| `<alt-j>`    | Powiększa wysokość aktywnego okna                                    |
+| `<alt-k>`    | Pomniejsza wysokość aktywnego okna                                   |
+| `<alt-l>`    | Pomniejsza szerokość aktywnego okna                                  |
+| `<leader>ze` | Uruchamia tryb ZenMode                                               |
+
+## Plugin vim-bookmarks
+
+| Skróty       | Opis                                                      |
+| ------------ | --------------------------------------------------------- |
+| `mm`         | Włącza / wyłącza znacznik                                 |
+| `ma`         | Dodaje adnotacje                                          |
+| `mn`         | Przechodzi do natępnego znacznika                         |
+| `mp`         | Przechodzi do poprzedniego znacznika                      |
+| `mc`         | Czyści wszystkie znaczniki                                |
+| `ml`         | Przenosi znacznik do wybranej lini                        |
 
 ## Plugin tpope/vim-surround
 
-| Skróty       | Opis                                                                 |
-| ------------ | ---------------------------------------------------------|
-| `<leader>sw` | Czeka na wprowadzenie znaku, którym otoczy wyraz         |
-| `<leader>sW` | Czeka na wprowadzenie znaku, którym otoczy WYRAZ         |
-| `<leader>sp` | Czeka na wprowadzenie znaku, który otoczy paragraf       |
-| `<leader>ss` | Czeka na wprowadzenie znaku, którym otoczy linię         |
-| `<leader>sd` | Czeka na wprowadzenie znaku, którym zostanie usunięty    |
+| Skróty       | Opis                                                      |
+| ------------ | --------------------------------------------------------- |
+| `<leader>sw` | Czeka na wprowadzenie znaku, którym otoczy wyraz          |
+| `<leader>sW` | Czeka na wprowadzenie znaku, którym otoczy WYRAZ          |
+| `<leader>sp` | Czeka na wprowadzenie znaku, który otoczy paragraf        |
+| `<leader>ss` | Czeka na wprowadzenie znaku, którym otoczy linię          |
+| `<leader>sd` | Czeka na wprowadzenie znaku, którym zostanie usunięty     |
 
 ## Poruszanie się po notatkach
 

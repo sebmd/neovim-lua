@@ -162,10 +162,10 @@ vim.keymap.set("c", "<c-r>p", '<c-r>"')
 -- Lista zmapowanych klawiszy
 -- vim.keymap.set("n", "<leader>m", ":Telescope keymaps<cr>")
 -- Kopiuje linię bez znaku końca linii
-vim.keymap.set("n", "<leader>y", "0v$hy")
+vim.keymap.set("n", "<leader>y", "0v$hy", { desc = "Kopiuje linię bez znaku końca linii" })
 -- wkleja za lub przed bieżącą linią
-vim.keymap.set("n", "<leader>p", "m`o<ESC>p``", { desc = "wkleja poniżej bieżącej linii" })
-vim.keymap.set("n", "<leader>P", "m`O<ESC>p``", { desc = "wkleja powyżej bieżącej linii" })
+vim.keymap.set("n", "<leader>p", "m`o<ESC>p``", { desc = "Wkleja poniżej bieżącej linii" })
+vim.keymap.set("n", "<leader>P", "m`O<ESC>p``", { desc = "Wkleja powyżej bieżącej linii" })
 -- kopiuje do schowka systemowego np: <leader>yp - kopiuje paragraf do schowka systemowego
 -- vim.keymap.set("n", "<leader>y", "\"+y")
 -- vim.keymap.set("n", "<leader>Y", "\"+Y")
