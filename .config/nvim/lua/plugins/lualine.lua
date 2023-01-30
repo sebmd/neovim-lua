@@ -1,6 +1,6 @@
 -- lualine
 -- Color table for highlights
-colors = {
+local colors = {
     bg = "#202328",
     fg = "#bbc2cf",
     yellow = "#ECBE7B",
@@ -14,7 +14,17 @@ colors = {
     red = "#ec5f67",
 }
 
-conditions = {
+local diagnostics = {
+	"diagnostics",
+	sources = { "nvim_diagnostic" },
+	sections = { "error", "warn" },
+	symbols = { error = " ", warn = " " },
+	colored = false,
+	update_in_insert = false,
+	always_visible = true,
+}
+
+local conditions = {
     buffer_not_empty = function()
         return vim.fn.empty(vim.fn.expand("%:t")) ~= 1
     end,
@@ -29,7 +39,7 @@ conditions = {
 }
 
 -- Config
-config = {
+local config = {
     options = {
         -- Disable sections and component separators
         component_separators = "",
@@ -68,19 +78,19 @@ config = {
     },
 }
 
-ins_left = function(component)
+local ins_left = function(component)
     table.insert(config.sections.lualine_c, component)
 end
 
-ins_right = function(component)
+local ins_right = function(component)
     table.insert(config.sections.lualine_x, component)
 end
 
-user = function()
-    return modules.utils.stl_escape(vim.loop.os_gethostname())
-end
+-- local user = function()
+    -- return vim.modules.utils.stl_escape(vim.loop.os_gethostname())
+-- end
 
-diff_source = function()
+local diff_source = function()
     local gitsigns = vim.b.gitsigns_status_dict
     if gitsigns then
         return {
@@ -168,6 +178,8 @@ require("lualine").setup({
         color = { fg = colors.green, bg = colors.bg },
         cond = nil,
     }),
+
+    ins_left({ "diagnostics" }),
 
     -- Insert mid section. You can make any number of sections in neovim :)
     -- for lualine it's any number greater then 2
