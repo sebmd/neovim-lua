@@ -14,6 +14,7 @@ return {
 	        dashboard.button("b", "  Skrypty ~/.bin", "<cmd>lua FindFilesDir('$HOME/bin')<cr>"),
 	        dashboard.button("c", "  Pliki konfiguracyjne ~/.config", "<cmd>lua FindFilesDir('$HOME/.config')<cr>"),
 	        dashboard.button("v", "  Konfiguracja Neovim", "<cmd>lua NvimConfig()<cr>"),
+	        dashboard.button("k", "  Kolory", "<cmd>Kolory<cr>"),
 	        dashboard.button("d", "  Dokumentacja", "<cmd>lua Docs()<cr>"),
 	        dashboard.button("u", "  Aktualizacja pluginów", "<cmd>Lazy update<cr>"),
         }

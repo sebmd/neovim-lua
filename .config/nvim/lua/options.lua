@@ -1,6 +1,6 @@
 -- options.lua ustawienia
-vim.wo.number = true -- wyświetlanie numerów linii
-vim.wo.relativenumber = true -- wyświetlanie relatywnych numerów linii
+vim.opt.number = true -- wyświetlanie numerów linii
+vim.opt.relativenumber = true -- wyświetlanie relatywnych numerów linii
 vim.opt.numberwidth = 5 -- ustawia szerokość kolumny numerowania linii
 vim.opt.laststatus = 3
 -- vim.opt.showtabline = 1 -- górna belka: 0 nie pokazuje; 1 pokazuje jeśli są karty (tab), 2 zasze pokazuje
