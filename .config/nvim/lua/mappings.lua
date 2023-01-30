@@ -7,22 +7,22 @@ vim.keymap.set("n", "<leader>5", "<cmd>!./%<cr>", { desc = "Uruchom skrypt" })
 vim.keymap.set("n", "<leader>7", "<cmd>setlocal spell! spell? spelllang=pl<cr>", { desc = "Włącz sprawdzanie pisowni" })
 vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<cr>zv')
 vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<cr>zv')
-vim.keymap.set("n", "gj", '<cmd>lua require"gitsigns.actions".next_hunk()<cr>zv')
-vim.keymap.set("n", "gk", '<cmd>lua require"gitsigns.actions".prev_hunk()<cr>zv', { silent = true })
+vim.keymap.set("n", "gj", '<cmd>lua require"gitsigns.actions".next_hunk()<cr>zv', { desc = "Następna zmiana w pliku - Git" })
+vim.keymap.set("n", "gk", '<cmd>lua require"gitsigns.actions".prev_hunk()<cr>zv', { silent = true }, { desc = "Poprzednia zmiana w pliku - git" })
 vim.keymap.set("n", "<esc>", "<cmd>nohl<cr>", { silent = true })
 -- bufory
 vim.keymap.set("n", "<leader>,", "<cmd>bp<cr>", { desc = "Poprzedni bufor" })
 vim.keymap.set("n", "<leader>.", "<cmd>bn<cr>", { desc = "Następny bufor" })
 vim.keymap.set("n", "<tab>", "<cmd>e #<cr>")
-vim.keymap.set("n", "<leader>B", "<cmd>Telescope buffers<cr>")
+vim.keymap.set("n", "<leader>B", "<cmd>Telescope buffers<cr>", { desc = "Przechodzi do wybranego bufora - Telescope" })
 vim.keymap.set("n", "<leader>Bs", "<cmd>BufferOrderByBufferNumber<cr>")
 vim.keymap.set("n", "<leader>Bd", "<cmd>BufferPickDelete<cr>")
 vim.keymap.set("n", "<leader>Bc", "<cmd>BufferCloseAllButCurrent<cr>")
-vim.keymap.set("n", "<leader>b", "<cmd>BufferPick<cr>")
+vim.keymap.set("n", "<leader>b", "<cmd>BufferPick<cr>", { desc = "Przechodzi do wybranego bufora" })
 vim.keymap.set("n", "<leader>d", "<cmd>bd<cr>")
 -- okna
 vim.keymap.set("n", "<leader>o", "<cmd>only<cr>")
-vim.keymap.set("n", "<leader>c", "<cmd>close<cr>")
+vim.keymap.set("n", "<leader>c", "<cmd>close<cr>", { desc = "Zamyka aktywne okno" })
 -- Poruszanie się pomiędzy oknami za pomocą <c-h,j,k,l>
 vim.keymap.set("n", "<c-h>", "<c-w><c-h>")
 vim.keymap.set("n", "<c-j>", "<c-w><c-j>")
@@ -37,38 +37,38 @@ vim.keymap.set("n", "<m-j>", "<cmd>resize +2<cr>")
 vim.keymap.set("n", "<m-k>", "<cmd>resize -2<cr>")
 vim.keymap.set("n", "<m-l>", "<cmd>vertical resize +2<cr>")
 --
-vim.keymap.set("n", "<leader>;", ":", { silent = false })
+vim.keymap.set("n", "<leader>;", ":", { silent = false }, { desc = "Wchodzi do trybu COMMAND" })
 vim.keymap.set("x", "<leader>;", ":", { silent = false })
-vim.keymap.set("n", "<leader>C", "<cmd>enew<cr>")
+vim.keymap.set("n", "<leader>C", "<cmd>enew<cr>", { desc = "Tworzy nowy plik" })
 -- vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>")
 vim.keymap.set(
   "n",
   "<leader>f",
   "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '--follow', '-g', '!.git' }})<cr>",
-  default_opts
+  { desc = "Wyszukuje pliki" }
 )
-vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>")
-vim.keymap.set("n", "<leader>l", "<cmd>lua FileInfo()<cr>")
-vim.keymap.set("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
-vim.keymap.set("n", "<leader>N", "<cmd>NeoTreeShowToggle<cr>")
-vim.keymap.set("n", "<leader>r", "<cmd>Telescope registers<cr>")
+vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>l", "<cmd>lua FileInfo()<cr>", { desc = "Wyświetla informacje o pliku" })
+vim.keymap.set("n", "<leader>n", "<cmd>NvimTreeToggle<cr>", { desc = "Menadżer plików NvimTree" })
+vim.keymap.set("n", "<leader>N", "<cmd>NeoTreeShowToggle<cr>", { desc = "Menadżer plików NeoTree" })
+vim.keymap.set("n", "<leader>r", "<cmd>Telescope registers<cr>", { desc = "Przeszukiwanie rejestrów" })
 vim.keymap.set("n", "<leader>so", '<cmd>luafile %<cr><cmd>echo "Plik przeładowany ..."<cr>')
-vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")
-vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>")
-vim.keymap.set("n", "<leader>w", "<cmd>lua Write()<cr>")
-vim.keymap.set("n", "<leader>x", "<cmd>lua Write()<cr><cmd>q<cr>")
+vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>", { desc = "Uruchamia terminal ToggleTerm" })
+vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>", { desc = "Rejestr zmian Undotree" })
+vim.keymap.set("n", "<leader>w", "<cmd>lua Write()<cr>", { desc = "Zapisuje zmiany" })
+vim.keymap.set("n", "<leader>x", "<cmd>lua Write()<cr><cmd>q<cr>", { desc = "Zapisuje zmiany i wychodzi" })
 vim.keymap.set("n", "<leader>z", "<cmd>q!<cr>")
 vim.keymap.set("n", "<leader>q", "<cmd>q<cr>")
 vim.keymap.set("n", "qq", "<cmd>q<cr>")
 vim.keymap.set("n", "<c-_>", "<Plug>kommentary_line_default", {})
 vim.keymap.set("x", "<c-_>", "<Plug>kommentary_visual_default", {})
-vim.keymap.set("n", "dh", "xd0")
-vim.keymap.set("n", "dl", "d$")
+vim.keymap.set("n", "dh", "xd0", { desc = "Usuwa od znaku do początku linii" })
+vim.keymap.set("n", "dl", "d$", { desc = "Usuwa od znaku do końca linii" })
 vim.keymap.set("n", "gf", "<cmd>edit <cfile><cr>")
 -- Uruchamia przeglądarkę na linku pod kursorem używając przeglądarki zdefiniowanej w zmiennej $BROWSER
 vim.keymap.set("n", "gx", "<cmd>silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<cr>")
-vim.keymap.set({"n", "x" }, "gh", "0")
-vim.keymap.set({"n", "x" }, "gl", "$")
+vim.keymap.set({"n", "x" }, "gh", "0", { desc = "Początek linii" })
+vim.keymap.set({"n", "x" }, "gl", "$", { desc = "Koniec linii" })
 vim.keymap.set({"n", "x" }, "$", "g_")  -- przechodzi do ostatniego drukowalnego znaku w linii
 -- vim.keymap.set("n", "H", "0")
 -- vim.keymap.set("n", "M", "gM")
@@ -125,7 +125,8 @@ vim.keymap.set("n", "<leader>ze", "<cmd>ZenMode<cr>")
 vim.keymap.set(
   "n",
   "<leader>i",
-  '<cmd>lua require("telescope.builtin").git_status(require("telescope.themes").get_dropdown({}))<cr>'
+  '<cmd>lua require("telescope.builtin").git_status(require("telescope.themes").get_dropdown({}))<cr>',
+  { desc = "Pokazuje zmiany w repozytorium Git" }
 )
 -- Przechodzi do kolejnej / poprzedniej szukanej pozycji, dodatkowo wyśrodkowuje ekran i otwiera zagnieżdżenia
 vim.keymap.set("n", "n", "nzzzv")
