@@ -23,7 +23,6 @@ require("plugins.indent-blankline") -- ~/.config/nvim/lua/plugins/indent-blankli
 require("plugins.kommentary") -- ~/.config/nvim/lua/plugins/kommentary.lua
 require("plugins.leap") -- ~/.config/nvim/lua/plugins/leap.lua
 require("plugins.lsp-zero") -- ~/.config/nvim/lua/plugins/lsp-zero.lua
-require("plugins.lspkind") -- ~/.config/nvim/lua/plugins/lspkind.lua
 require("plugins.lualine") -- ~/.config/nvim/lua/plugins/lualine.lua
 require("plugins.modes-nvim") -- ~/.config/nvim/lua/plugins/modes-nvim.lua
 require("plugins.neoterm") -- ~/.config/nvim/lua/plugins/neoterm.lua
