@@ -2,6 +2,7 @@
 -- mapowanie klawisza leader w pliku ~/.config/nvim/init.lua
 -- vim.g.mapleader = " "
 -- vim.g.maplocalleader = " "
+
 vim.keymap.set("n", "<leader>5", "<cmd>!./%<cr>")
 vim.keymap.set("n", "<leader>7", "<cmd>setlocal spell! spell? spelllang=pl<cr>")
 vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<cr>zv')

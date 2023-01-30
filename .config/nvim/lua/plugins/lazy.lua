@@ -1,5 +1,21 @@
--- init plugins
-return {
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "--single-branch",
+        "https://github.com/folke/lazy.nvim.git",
+        lazypath,
+    })
+end
+
+vim.opt.runtimepath:prepend(lazypath)
+
+local ok, lazy = pcall(require, "lazy")
+if not ok then return end
+
+lazy.setup({
     { "rose-pine/neovim", enabled = true },
     { "rebelot/kanagawa.nvim", enabled = true },
     { "sainnhe/everforest", enabled = true },
@@ -28,6 +44,7 @@ return {
     { "nfnty/vim-nftables", enabled = false },
     { "b3nj5m1n/kommentary", enabled = true },
     { "jamessan/vim-gnupg", enabled = true },
+    { "goolord/alpha-nvim", enabled = true },
     { "akinsho/toggleterm.nvim", enabled = true },
     { "nyngwang/NeoTerm.lua", enabled = true },
     { "tpope/vim-eunuch", enabled = true },
@@ -65,4 +82,20 @@ return {
     { "airblade/vim-rooter", enabled = false },
     { "folke/which-key.nvim", enabled = true },
     { "mvllow/modes.nvim", enabled = false },
-}
+    {
+        'VonHeikemen/lsp-zero.nvim', enabled = true, branch = 'v1.x', dependencies = {
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
+            {"onsails/lspkind.nvim"},
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lua'},
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
+        }
+    }
+})

@@ -91,176 +91,169 @@ diff_source = function()
     end
 end
 
-return {
-    "nvim-lualine/lualine.nvim",
-    dependencies = "nvim-tree/nvim-web-devicons",
+require("lualine").setup({
 
-    config = function(plugin)
-        require("lualine").setup({
+    ins_left({
+        -- mode component
+        function()
+            -- auto change color according to neovims mode
+            local mode_color = {
+                n = colors.red,
+                i = colors.green,
+                v = colors.blue,
+                [""] = colors.blue,
+                V = colors.blue,
+                c = colors.violet,
+                no = colors.red,
+                s = colors.orange,
+                S = colors.orange,
+                [""] = colors.orange,
+                ic = colors.yellow,
+                R = colors.violet,
+                Rv = colors.violet,
+                cv = colors.red,
+                ce = colors.red,
+                r = colors.cyan,
+                rm = colors.cyan,
+                ["r?"] = colors.cyan,
+                ["!"] = colors.red,
+                t = colors.red,
+            }
+            vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
+            return "▊"
+        end,
+        color = "LualineMode",
+        padding = { left = 0 },
+    }),
 
-            ins_left({
-                -- mode component
-                function()
-                    -- auto change color according to neovims mode
-                    local mode_color = {
-                        n = colors.red,
-                        i = colors.green,
-                        v = colors.blue,
-                        [""] = colors.blue,
-                        V = colors.blue,
-                        c = colors.violet,
-                        no = colors.red,
-                        s = colors.orange,
-                        S = colors.orange,
-                        [""] = colors.orange,
-                        ic = colors.yellow,
-                        R = colors.violet,
-                        Rv = colors.violet,
-                        cv = colors.red,
-                        ce = colors.red,
-                        r = colors.cyan,
-                        rm = colors.cyan,
-                        ["r?"] = colors.cyan,
-                        ["!"] = colors.red,
-                        t = colors.red,
-                    }
-                    vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
-                    return "▊"
-                end,
-                color = "LualineMode",
-                padding = { left = 0 },
-            }),
+    ins_left({
+        -- filesize component
+        function()
+            local function format_file_size(file)
+                local size = vim.fn.getfsize(file)
+                if size <= 0 then
+                    return ""
+                end
+                local sufixes = { "b", "k", "m", "g" }
+                local i = 1
+                while size > 1024 do
+                    size = size / 1024
+                    i = i + 1
+                end
+                return string.format("%.1f%s", size, sufixes[i])
+            end
+            local file = vim.fn.expand("%:p")
+            if string.len(file) == 0 then
+                return ""
+            end
+            return format_file_size(file)
+        end,
+        condition = conditions.buffer_not_empty,
+    }),
 
-            ins_left({
-                -- filesize component
-                function()
-                    local function format_file_size(file)
-                        local size = vim.fn.getfsize(file)
-                        if size <= 0 then
-                            return ""
-                        end
-                        local sufixes = { "b", "k", "m", "g" }
-                        local i = 1
-                        while size > 1024 do
-                            size = size / 1024
-                            i = i + 1
-                        end
-                        return string.format("%.1f%s", size, sufixes[i])
-                    end
-                    local file = vim.fn.expand("%:p")
-                    if string.len(file) == 0 then
-                        return ""
-                    end
-                    return format_file_size(file)
-                end,
-                condition = conditions.buffer_not_empty,
-            }),
+    ins_left({ "location" }),
 
-            ins_left({ "location" }),
+    ins_left({ "progress", color = { fg = colors.fg } }),
 
-            ins_left({ "progress", color = { fg = colors.fg } }),
+    ins_left({
+        function()
+            local current_line = vim.fn.line(".")
+            local total_lines = vim.fn.line("$")
+            local chars = { "_", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" }
+            local line_ratio = current_line / total_lines
+            local index = math.ceil(line_ratio * #chars)
+            return chars[index]
+        end,
+        padding = { left = 0, right = 0 },
+        color = { fg = colors.green, bg = colors.bg },
+        cond = nil,
+    }),
 
-            ins_left({
-                function()
-                    local current_line = vim.fn.line(".")
-                    local total_lines = vim.fn.line("$")
-                    local chars = { "_", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" }
-                    local line_ratio = current_line / total_lines
-                    local index = math.ceil(line_ratio * #chars)
-                    return chars[index]
-                end,
-                padding = { left = 0, right = 0 },
-                color = { fg = colors.green, bg = colors.bg },
-                cond = nil,
-            }),
+    -- Insert mid section. You can make any number of sections in neovim :)
+    -- for lualine it's any number greater then 2
+    ins_left({
+        function()
+            return "%="
+        end,
+    }),
 
-            -- Insert mid section. You can make any number of sections in neovim :)
-            -- for lualine it's any number greater then 2
-            ins_left({
-                function()
-                    return "%="
-                end,
-            }),
+    -- nazwa pliku
+    ins_left({
+        "filename",
+        condition = conditions.buffer_not_empty,
+        color = { fg = colors.blue },
+    }),
 
-            -- nazwa pliku
-            ins_left({
-                "filename",
-                condition = conditions.buffer_not_empty,
-                color = { fg = colors.blue },
-            }),
+    -- Add components to right sections
+    ins_right({
+        "o:encoding",
+        fmt = string.upper,
+        condition = conditions.hide_in_width,
+        color = { fg = colors.green },
+    }),
 
-            -- Add components to right sections
-            ins_right({
-                "o:encoding",
-                fmt = string.upper,
-                condition = conditions.hide_in_width,
-                color = { fg = colors.green },
-            }),
+    ins_right({
+        "fileformat",
+        icons_enabled = true,
+        color = { fg = colors.green },
+    }),
 
-            ins_right({
-                "fileformat",
-                icons_enabled = true,
-                color = { fg = colors.green },
-            }),
+    -- funkcja pokazuje czy w konfiguracji mamt ustawione spacje czy taby
+    ins_right({
+        function()
+            if not vim.api.nvim_buf_get_option(0, "expandtab") then
+                return "T" .. vim.api.nvim_buf_get_option(0, "tabstop") .. " "
+            end
+            local size = vim.api.nvim_buf_get_option(0, "shiftwidth")
+            if size == 0 then
+                size = vim.api.nvim_buf_get_option(0, "tabstop")
+            end
+            return "S" .. size
+        end,
+        cond = conditions.hide_in_width,
+        color = { fg = colors.green },
+    }),
 
-            -- funkcja pokazuje czy w konfiguracji mamt ustawione spacje czy taby
-            ins_right({
-                function()
-                    if not vim.api.nvim_buf_get_option(0, "expandtab") then
-                        return "T" .. vim.api.nvim_buf_get_option(0, "tabstop") .. " "
-                    end
-                    local size = vim.api.nvim_buf_get_option(0, "shiftwidth")
-                    if size == 0 then
-                        size = vim.api.nvim_buf_get_option(0, "tabstop")
-                    end
-                    return "S" .. size
-                end,
-                cond = conditions.hide_in_width,
-                color = { fg = colors.green },
-            }),
+    ins_right({
+        "filetype",
+        cond = conditions.hide_in_width,
+        color = {},
+    }),
 
-            ins_right({
-                "filetype",
-                cond = conditions.hide_in_width,
-                color = {},
-            }),
+    ins_right({
+        "branch",
+        icon = "",
+        condition = conditions.check_git_workspace,
+        color = { fg = colors.blue, gui = "bold" },
+    }),
 
-            ins_right({
-                "branch",
-                icon = "",
-                condition = conditions.check_git_workspace,
-                color = { fg = colors.blue, gui = "bold" },
-            }),
+    ins_right({
+        "diff",
+        source = diff_source,
+        symbols = { added = " ", modified = " ", removed = " " },
+        color_added = colors.green,
+        color_modified = colors.orange,
+        color_removed = colors.red,
+        condition = conditions.hide_in_width,
+    }),
 
-            ins_right({
-                "diff",
-                source = diff_source,
-                symbols = { added = " ", modified = " ", removed = " " },
-                color_added = colors.green,
-                color_modified = colors.orange,
-                color_removed = colors.red,
-                condition = conditions.hide_in_width,
-            }),
+    ins_right({
+        function()
+            local user = vim.fn.getenv('USER')
+            local hostname = vim.loop.os_gethostname()
+            return user .. "@" .. hostname
+        end,
+        color = { fg = colors.blue },
+    }),
 
-            ins_right({
-                function()
-                    local user = vim.fn.getenv('USER')
-                    local hostname = vim.loop.os_gethostname()
-                    return user .. "@" .. hostname
-                end,
-                color = { fg = colors.blue },
-            }),
+    ins_right({
+        function()
+            return "▊"
+        end,
+        color = { fg = colors.blue },
+        padding = { right = 0 },
+    }),
 
-            ins_right({
-                function()
-                    return "▊"
-                end,
-                color = { fg = colors.blue },
-                padding = { right = 0 },
-            }),
-
-            -- Now don't forget to initialize lualine
-            require("lualine").setup(config)
-        })
-    end
-}
+    -- Now don't forget to initialize lualine
+    require("lualine").setup(config)
+})
