@@ -21,7 +21,7 @@ vim.keymap.set("n", "<leader>Bc", "<cmd>BufferCloseAllButCurrent<cr>")
 vim.keymap.set("n", "<leader>b", "<cmd>BufferPick<cr>", { desc = "Przechodzi do wybranego bufora" })
 vim.keymap.set("n", "<leader>d", "<cmd>bd<cr>", { desc = "Zamknięcie bufora" })
 -- okna
-vim.keymap.set("n", "<leader>o", "<cmd>only<cr>")
+vim.keymap.set("n", "<leader>o", "<cmd>only<cr>", { desc = "Zamyka wszystkie okna poza aktywnym" })
 vim.keymap.set("n", "<leader>c", "<cmd>close<cr>", { desc = "Zamyka aktywne okno" })
 -- Poruszanie się pomiędzy oknami za pomocą <c-h,j,k,l>
 vim.keymap.set("n", "<c-h>", "<c-w><c-h>")
@@ -57,8 +57,8 @@ vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>", { desc = "Uruchamia term
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>", { desc = "Rejestr zmian Undotree" })
 vim.keymap.set("n", "<leader>w", "<cmd>lua Write()<cr>", { desc = "Zapisuje zmiany" })
 vim.keymap.set("n", "<leader>x", "<cmd>lua Write()<cr><cmd>q<cr>", { desc = "Zapisuje zmiany i wychodzi" })
-vim.keymap.set("n", "<leader>z", "<cmd>q!<cr>")
-vim.keymap.set("n", "<leader>q", "<cmd>q<cr>")
+vim.keymap.set("n", "<leader>z", "<cmd>q!<cr>", { desc = "Kończy pracę :q!" })
+vim.keymap.set("n", "<leader>q", "<cmd>qa<cr>", { desc = "Kończy pracę :qa" })
 vim.keymap.set("n", "qq", "<cmd>q<cr>")
 vim.keymap.set("n", "<c-_>", "<Plug>kommentary_line_default", {})
 vim.keymap.set("x", "<c-_>", "<Plug>kommentary_visual_default", {})
@@ -146,7 +146,7 @@ vim.keymap.set("x", "-", "<C-x>", { silent = true })
 -- Wyrównanie paragrafu '=ip' dodatkowo zawija tekst na długośc 'textwidth' znaków 'gqap'
 vim.keymap.set("n", "<leader>a", "=ip gqap", { desc = "Wyrównanie paragrafu" })
 -- zaznacza wyraz pod kursorem i przechodzi do modyfikacji wszystkich znalezionych wyrazów
-vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Znajdź i zamień, wyraz pod kursorem" })
 -- w trybie VISUAL ('v') należy zacząć zaznaczanie od słowa, które chcemy zamienić
 vim.keymap.set("x", "<leader>s", ":s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 -- Poruszanie się w trybie COMMAND
