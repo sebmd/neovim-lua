@@ -16,10 +16,10 @@ vim.keymap.set("n", "<leader>.", "<cmd>bn<cr>", { desc = "Następny bufor" })
 vim.keymap.set("n", "<tab>", "<cmd>e #<cr>")
 vim.keymap.set("n", "<leader>B", "<cmd>Telescope buffers<cr>", { desc = "Przechodzi do wybranego bufora - Telescope" })
 vim.keymap.set("n", "<leader>Bs", "<cmd>BufferOrderByBufferNumber<cr>")
-vim.keymap.set("n", "<leader>Bd", "<cmd>BufferPickDelete<cr>")
+vim.keymap.set("n", "<leader>Bd", "<cmd>BufferPickDelete<cr>", { desc = "Zamknięcie bufora" })
 vim.keymap.set("n", "<leader>Bc", "<cmd>BufferCloseAllButCurrent<cr>")
 vim.keymap.set("n", "<leader>b", "<cmd>BufferPick<cr>", { desc = "Przechodzi do wybranego bufora" })
-vim.keymap.set("n", "<leader>d", "<cmd>bd<cr>")
+vim.keymap.set("n", "<leader>d", "<cmd>bd<cr>", { desc = "Zamknięcie bufora" })
 -- okna
 vim.keymap.set("n", "<leader>o", "<cmd>only<cr>")
 vim.keymap.set("n", "<leader>c", "<cmd>close<cr>", { desc = "Zamyka aktywne okno" })
@@ -37,8 +37,8 @@ vim.keymap.set("n", "<m-j>", "<cmd>resize +2<cr>")
 vim.keymap.set("n", "<m-k>", "<cmd>resize -2<cr>")
 vim.keymap.set("n", "<m-l>", "<cmd>vertical resize +2<cr>")
 --
-vim.keymap.set("n", "<leader>;", ":", { silent = false }, { desc = "Wchodzi do trybu COMMAND" })
-vim.keymap.set("x", "<leader>;", ":", { silent = false })
+vim.keymap.set("n", "<leader>;", ":", { desc = "Wchodzi do trybu COMMAND" }, { silent = false })
+vim.keymap.set("x", "<leader>;", ":", { desc = "Wchodzi do trybu COMMAND" }, { silent = false })
 vim.keymap.set("n", "<leader>C", "<cmd>enew<cr>", { desc = "Tworzy nowy plik" })
 -- vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>")
 vim.keymap.set(
@@ -144,7 +144,7 @@ vim.keymap.set("x", "+", "<C-a>", { silent = true })
 vim.keymap.set("n", "-", "<C-x>", { silent = true })
 vim.keymap.set("x", "-", "<C-x>", { silent = true })
 -- Wyrównanie paragrafu '=ip' dodatkowo zawija tekst na długośc 'textwidth' znaków 'gqap'
-vim.keymap.set("n", "<leader>a", "=ip gqap")
+vim.keymap.set("n", "<leader>a", "=ip gqap", { desc = "Wyrównanie paragrafu" })
 -- zaznacza wyraz pod kursorem i przechodzi do modyfikacji wszystkich znalezionych wyrazów
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 -- w trybie VISUAL ('v') należy zacząć zaznaczanie od słowa, które chcemy zamienić
@@ -184,7 +184,7 @@ vim.keymap.set("x", "p", '"_c<Esc>p')  -- wkleja, nie podmieniając rejestru w t
 -- Edcja konfiguracji
 vim.keymap.set("n", "<leader>v", "<cmd>lua NvimConfig()<cr>")
 -- Przeszukiwanie dokuentacji
-vim.keymap.set("n", "<leader>D", "<cmd>lua Docs()<cr>")
+vim.keymap.set("n", "<leader>D", "<cmd>lua Docs()<cr>", { desc = "Przeszukiwanie lokalnej dokumentacji" })
 -- Obsługa pluginu vim-surround
 -- <leader>sw czeka na wprowadzenie znaku, którym otoczy wyraz
 -- <leader>sW czeka na wprowadzenie znaku, którym otoczy WYRAZ
@@ -197,8 +197,8 @@ vim.keymap.set("n", "<leader>ssp", ":norm ysip")
 vim.keymap.set("n", "<leader>ss", ":norm yss")
 vim.keymap.set("n", "<leader>sdd", ":norm ds")
 -- Telescope recent files, bookmarks
-vim.keymap.set("n", "<leader>m", require('telescope').extensions.vim_bookmarks.all, {})
-vim.keymap.set("n", "<leader>M", require('telescope').extensions.vim_bookmarks.current_file, {})
+vim.keymap.set("n", "<leader>m", require('telescope').extensions.vim_bookmarks.all, { desc = "Wyszukiwarka znaczników" }, {})
+vim.keymap.set("n", "<leader>M", require('telescope').extensions.vim_bookmarks.current_file, { desc = "Wyszukiwarka lokalnych znaczników" }, {})
 -- Sugestie sprawdzania pisowni
 vim.keymap.set("n", "gs", "<cmd>lua require('telescope.builtin').spell_suggest()<CR>")
 -- Kopiuje bieżącą linię do pliku $NOTES_DIR/INBOX.md
