@@ -3,16 +3,16 @@
 -- vim.g.mapleader = " "
 -- vim.g.maplocalleader = " "
 
-vim.keymap.set("n", "<leader>5", "<cmd>!./%<cr>")
-vim.keymap.set("n", "<leader>7", "<cmd>setlocal spell! spell? spelllang=pl<cr>")
+vim.keymap.set("n", "<leader>5", "<cmd>!./%<cr>", { desc = "Uruchom skrypt" })
+vim.keymap.set("n", "<leader>7", "<cmd>setlocal spell! spell? spelllang=pl<cr>", { desc = "Włącz sprawdzanie pisowni" })
 vim.keymap.set("n", "<c-n>", '<cmd>lua require"gitsigns.actions".next_hunk()<cr>zv')
 vim.keymap.set("n", "<c-p>", '<cmd>lua require"gitsigns.actions".prev_hunk()<cr>zv')
 vim.keymap.set("n", "gj", '<cmd>lua require"gitsigns.actions".next_hunk()<cr>zv')
 vim.keymap.set("n", "gk", '<cmd>lua require"gitsigns.actions".prev_hunk()<cr>zv', { silent = true })
 vim.keymap.set("n", "<esc>", "<cmd>nohl<cr>", { silent = true })
 -- bufory
-vim.keymap.set("n", "<leader>,", "<cmd>bp<cr>")
-vim.keymap.set("n", "<leader>.", "<cmd>bn<cr>")
+vim.keymap.set("n", "<leader>,", "<cmd>bp<cr>", { desc = "Poprzedni bufor" })
+vim.keymap.set("n", "<leader>.", "<cmd>bn<cr>", { desc = "Następny bufor" })
 vim.keymap.set("n", "<tab>", "<cmd>e #<cr>")
 vim.keymap.set("n", "<leader>B", "<cmd>Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>Bs", "<cmd>BufferOrderByBufferNumber<cr>")
