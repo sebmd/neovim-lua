@@ -13,13 +13,19 @@ lsp.ensure_installed({
 lsp.configure('sumneko_lua', {
     settings = {
         Lua = {
+            telemetry = { enable = false },
+            runtime = {
+                version = "LuaJIT",
+                special = {
+                    reload = "require",
+                },
+            },
             diagnostics = {
                 globals = { 'vim' }
             }
         }
     }
 })
-
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}

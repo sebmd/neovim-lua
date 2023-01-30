@@ -4,6 +4,7 @@
 
 -- ustawienie klawisza leader
 vim.g.mapleader = " "
+-- ustawienie klawisza localeader
 vim.g.maplocalleader = " "
 
 -- Pluginy
