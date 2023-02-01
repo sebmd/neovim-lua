@@ -32,6 +32,7 @@ require("plugins.nvim-cursorline-conf") -- ~/.config/nvim/lua/plugins/nvim-curso
 require("plugins.nvim-tree") -- ~/.config/nvim/lua/plugins/nvim-tree.lua
 require("plugins.pears") -- ~/.config/nvim/lua/plugins/pears.lua
 require("plugins.rooter") -- ~/.config/nvim/lua/plugins/rooter.lua
+require("plugins.smoothcursor") -- ~/.config/nvim/lua/plugins/smoothcursor.lua
 require("plugins.telescope") -- ~/.config/nvim/lua/plugins/telescope.lua
 require("plugins.todo-comments") -- ~/.config/nvim/lua/plugins/todo-comments.lua
 require("plugins.toggleterm") -- ~/.config/nvim/lua/plugins/toggleterm.lua

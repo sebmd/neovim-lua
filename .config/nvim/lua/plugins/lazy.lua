@@ -33,6 +33,7 @@ lazy.setup({
     { "sainnhe/gruvbox-material", enabled = false },
     { "savq/melange-nvim", enabled = false },
     { "zekzekus/menguless", enabled = false },
+    { "gen740/SmoothCursor.nvim", enabled = true },
     { "yamatsum/nvim-cursorline", enabled = false },
     { "nvim-tree/nvim-web-devicons", enabled = true },
     { "lukas-reineke/indent-blankline.nvim", enabled = true },
