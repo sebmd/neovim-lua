@@ -15,7 +15,7 @@ vim.opt.encoding = "utf-8"
 vim.wo.foldcolumn = "1"
 vim.wo.foldmethod = "marker"
 vim.opt.iskeyword:append("-,_") -- nie traktuje `-` jako seperatora słowa np: wyraz-jeden uznawane jest za całe słowo
-vim.opt.title = true
+vim.opt.title = false
 vim.opt.titlestring = "%<%F%=%l/%L - NVim"
 vim.opt.pumheight = 10
 vim.opt.autoread = true

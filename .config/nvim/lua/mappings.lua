@@ -119,6 +119,8 @@ vim.keymap.set("n", "q:", "<nop>")
 vim.keymap.set("n", "q:", ":Telescope command_history<cr>")
 vim.keymap.set("n", "q;", ":Telescope command_history<cr>")
 vim.keymap.set("n", "<leader>hc", ":Telescope command_history<cr>")
+-- Pokazuje / ukrwa relatywne numerowanie linii
+vim.keymap.set("n", "<leader>hr", "<cmd>set relativenumber!<cr>")
 -- Uruchamia tryb ZenMode
 vim.keymap.set("n", "<leader>ze", "<cmd>ZenMode<cr>")
 -- Git Status

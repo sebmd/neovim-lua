@@ -1,5 +1,7 @@
 # Skróty klawiszowe
 
+## Tryb NORMAL
+
 | Skróty       | Opis                                                                 |
 | ------------ | -------------------------------------------------------------------- |
 | `<spacja>`   | Klawisz **LEADER**                                                   |
@@ -45,6 +47,7 @@
 | `<tab>`      | Przechodzi pomiędzy dwoma ostatnio używanymi buforami                |
 | `q:`         | Historia komend `Telescope command_history`                          |
 | `<leader>hc` | Historia komend `Telescope command_history`                          |
+| `<leader>hr` | Pokazuje / ukrwa relatywne numerowanie linii                         | 
 | `dh`         | Usuwa od kursora do początku linii `xd0`                             |
 | `dl`         | Usuwa od kursora do końca linii `d$`                                 |
 | `gf`         | Otwiera / tworzy plik pod kursorem                                   |
