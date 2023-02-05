@@ -18,6 +18,7 @@ require("commands") -- ~/.config/nvim/lua/commands.lua
 require("autocommands") -- ~/.config/nvim/lua/autocommands.lua
 require("plugins.alpha") -- ~/.config/nvim/lua/plugins/alpha.lua
 require("plugins.barbar") -- ~/.config/nvim/lua/plugins/barbar.lua
+require("plugins.fauxclip") -- ~/.config/nvim/lua/plugins/fauxclip.lua
 require("plugins.fzf-lua") -- ~/.config/nvim/lua/plugins/fzf-lua.lua
 require("plugins.gitsigns") -- ~/.config/nvim/lua/plugins/gitsigns.lua
 require("plugins.indent-blankline") -- ~/.config/nvim/lua/plugins/indent-blankline.lua
