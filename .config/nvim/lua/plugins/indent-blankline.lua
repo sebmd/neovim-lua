@@ -6,5 +6,5 @@ require("indent_blankline").setup({
     filetype_exclude = { "help", "packer", "dashboard" },
     char_highlight = "LineNr",
     show_trailing_blankline_indent = false,
-    -- char_highlight_list = { "Normal", "Function", "Error" },
+    char_highlight_list = { "Normal", "Function", "Error" },
 })
