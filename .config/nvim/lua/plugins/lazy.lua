@@ -65,6 +65,7 @@ lazy.setup({
     { "liuchengxu/vista.vim", enabled = true },
     { "dhruvasagar/vim-table-mode", enabled = true },
     { "vimwiki/vimwiki", enabled = false },
+    { "nvim-neorg/neorg", enabled = false },
     { "junegunn/vim-markdown-toc", enabled = true },
     { "instant-markdown/vim-instant-markdown", enabled = false },
     { "oberblastmeister/neuron.nvim", enabled = false },

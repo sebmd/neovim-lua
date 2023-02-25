@@ -27,6 +27,7 @@ require("plugins.leap") -- ~/.config/nvim/lua/plugins/leap.lua
 require("plugins.lsp-zero") -- ~/.config/nvim/lua/plugins/lsp-zero.lua
 require("plugins.lualine") -- ~/.config/nvim/lua/plugins/lualine.lua
 require("plugins.modes-nvim") -- ~/.config/nvim/lua/plugins/modes-nvim.lua
+require("plugins.neorg") -- ~/.config/nvim/lua/plugins/neorg.lua
 require("plugins.neoterm") -- ~/.config/nvim/lua/plugins/neoterm.lua
 require("plugins.nvim-cmp") -- ~/.config/nvim/lua/plugins/nvim-cmp.lua
 require("plugins.nvim-cursorline-conf") -- ~/.config/nvim/lua/plugins/nvim-cursorline.lua
