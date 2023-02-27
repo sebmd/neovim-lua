@@ -27,13 +27,16 @@
     * [nvim-web-devicons](#nvim-web-devicons)
     * [pears.nvim](#pears.nvim)
     * [plenary.nvim](#plenary.nvim)
+    * [SmoothCursor](#smoothcursor)
     * [targets.vim](#targets.vim)
     * [telescope.nvim](#telescope.nvim)
+    * [telescope-vim-bookmarks](#telescope-vim-bookmarks)
     * [todo-comments](#todo-comments)
     * [toggleterm](#toggleterm)
     * [trouble.nvim](#trouble.nvim)
     * [twilight.nvim](#twilight.nvim)
     * [undotree](#undotree)
+    * [vim-bookmarks](#vim-bookmarks)
     * [vim-dotoo](#vim-dotoo)
     * [vim-eunuch](#vim-eunuch)
     * [vim-fugitive](#vim-fugitive)
@@ -65,6 +68,9 @@
     * [nightfox.nvim](#nightfox.nvim)
     * [tokyonight.nvim](#tokyonight.nvim)
     * [horizon-nvim](#horizon-nvim)
+    * [catppuccin](#catppuccin)
+    * [iceberg.vim](#iceberg.vim)
+    * [melange-nvim](#melange-nvim)
 
 <!-- vim-markdown-toc -->
 
@@ -82,33 +88,33 @@ Zarządzanie górną belką buforów, oraz samymi buforami
 
 Polecenia barbar.nvim:
 
-- BufferPin
-- BufferGoto
-- BufferLast
-- BufferMove
-- BufferNext
-- BufferPrevious
-- BufferPick
-- BufferPickDelete
-- BufferClose
-- BufferFirst
-- BufferDelete
-- BufferWipeout
-- BufferCloseAllButCurrent
-- BufferCloseAllButCurrentOrPinned
-- BufferCloseAllButPinned
-- BufferCloseAllButVisable
-- BufferCloseBufferLeft
-- BufferCloseBufferRight
-- BufferMoveNext
-- BufferMovePrevious
-- BufferMoveStart
-- BufferOrderByBufferNumber
-- BufferOrderByLanguage
-- BufferOrderByDirectory
-- BufferOrderByWindowNumber
-- BufferScrollLeft
-- BufferScrollRight
+- `BufferPin`
+- `BufferGoto`
+- `BufferLast`
+- `BufferMove`
+- `BufferNext`
+- `BufferPrevious`
+- `BufferPick`
+- `BufferPickDelete`
+- `BufferClose`
+- `BufferFirst`
+- `BufferDelete`
+- `BufferWipeout`
+- `BufferCloseAllButCurrent`
+- `BufferCloseAllButCurrentOrPinned`
+- `BufferCloseAllButPinned`
+- `BufferCloseAllButVisable`
+- `BufferCloseBufferLeft`
+- `BufferCloseBufferRight`
+- `BufferMoveNext`
+- `BufferMovePrevious`
+- `BufferMoveStart`
+- `BufferOrderByBufferNumber`
+- `BufferOrderByLanguage`
+- `BufferOrderByDirectory`
+- `BufferOrderByWindowNumber`
+- `BufferScrollLeft`
+- `BufferScrollRight`
 
 ### [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 
@@ -240,6 +246,10 @@ Automatyczne zamykanie znaków takich jak "", '', itp.
 
 Biblioteka funkcji.
 
+### [SmoothCursor](https://github.com/gen740/SmoothCursor.nvim)
+
+Znacznik linii po lewej stronie kolumny z numerami linii, ma możliwość wyświetlania "animacji" poruszania się pomiędzy liniami
+
 ### [targets.vim](https://github.com/wellle/targets.vim)
 
 - https://github.com/wellle/targets.vim
@@ -255,6 +265,12 @@ Dostępne komendy:
 - `Telescope fd`
 - `Telescope tags`
 - `Telescope tags`
+
+### [telescope-vim-bookmarks](https://github.com/tom-anders/telescope-vim-bookmarks.nvim)
+
+- https://github.com/tom-anders/telescope-vim-bookmarks.nvim
+
+Przeszukiwanie zakładek.
 
 ### [todo-comments](https://github.com/folke/todo-comments.nvim)
 
@@ -277,6 +293,12 @@ Dodatkowe rozszerzenie dla `zen-mode`, wyróżnia edytowany paragraf.
 ### [undotree](https://github.com/mbbill/undotree)
 
 - https://github.com/mbbill/undotree
+
+### [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks)
+
+- https://github.com/MattesGroeger/vim-bookmarks
+
+Zaznaczanie i zarządzanie zakładkami w pliku.
 
 ### [vim-dotoo](https://github.com/dhruvasagar/vim-dotoo)
 
@@ -455,3 +477,15 @@ Tryb skupienia. Usuwa zbędne wodotryski.
 
 ![horizon.nvim](https://raw.githubusercontent.com/sebmd/neovim-lua/main/docs/img/horizon-nvim.png)
 
+
+### catppuccin
+
+- https://github.com/catppuccin/nvim
+
+### iceberg.vim
+
+- https://github.com/cocopon/iceberg.vim
+
+### melange-nvim
+
+- https://github.com/savq/melange-nvim
