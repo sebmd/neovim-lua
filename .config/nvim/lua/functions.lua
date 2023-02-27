@@ -1,18 +1,18 @@
 -- Zapisuje plik Write()
 Write = function()
     if vim.fn.filereadable(vim.fn.expand("%")) == 1 then
-	for _, v in ipairs(vim.fn.getbufinfo("%")) do
-	if v.changed == 1 then
-	    vim.cmd("silent update")
-	    print("Zapisałem" .. " " .. vim.fn.expand("%:p"))
-	else
-	    print("Brak zmian w pliku" .. " " .. vim.fn.expand("%:p"))
-	end
-	end
+	    for _, v in ipairs(vim.fn.getbufinfo("%")) do
+	        if v.changed == 1 then
+	            vim.cmd("silent update")
+	            print("Zapisałem" .. " " .. vim.fn.expand("%:p"))
+	        else
+	            print("Brak zmian w pliku" .. " " .. vim.fn.expand("%:p"))
+	        end
+	    end
     else
-	MkDir()
-	vim.cmd("silent write")
-	print("Utworzyłem" .. " " .. vim.fn.expand("%:p"))
+	    MkDir()
+	    vim.cmd("silent write")
+	    print("Utworzyłem" .. " " .. vim.fn.expand("%:p"))
     end
 end
 
