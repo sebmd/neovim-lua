@@ -84,6 +84,7 @@ lazy.setup({
     { "airblade/vim-rooter", enabled = false },
     { "folke/which-key.nvim", enabled = true },
     { "mvllow/modes.nvim", enabled = false },
+    { "vim-scripts/AutoComplPop", enabled = true },
     {
         'VonHeikemen/lsp-zero.nvim', enabled = true, branch = 'v1.x', dependencies = {
             {'neovim/nvim-lspconfig'},

@@ -1,6 +1,12 @@
 -- lsp-zero
 -- https://github.com/ThePrimeagen/init.lua/blob/master/after/plugin/lsp.lua
-local lsp = require("lsp-zero")
+
+local lsp_status_ok, lsp = pcall(require, "lsp-zero")
+if not lsp_status_ok then
+    return
+end
+
+-- local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
